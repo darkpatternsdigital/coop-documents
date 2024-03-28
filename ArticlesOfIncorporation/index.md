@@ -2,7 +2,7 @@
 
 For filing in Colorado:
 
-[File
+[WIP Document](./document) | [File
 online](https://www.coloradosos.gov/biz/FileDocNameAvailCriteria.do?transTyp=ARTORG_LCA)
 |
 [Instructions](https://www.sos.state.co.us/pubs/business/helpFiles/ARTORG_LCA_HELP.html)
@@ -18,3 +18,10 @@ online](https://www.coloradosos.gov/biz/FileDocNameAvailCriteria.do?transTyp=ART
     - Statement regarding registered agent consent
 - Purpose statement
 - Individual causing delivery
+
+## Needs Discussion
+
+- Article establishing Board of Directors can limit the Board or provide
+  guidance for what factors must be considered with decision making.
+- Preemptive Rights/Cumulative Voting - do we include?
+- When/how do initial bylaws get filed? (Do they get filed?)
