@@ -1,0 +1,58 @@
+# Bylaws
+
+[WIP Document](./document) | [Sample](https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-Ldj_CiYRwRyAUyaGo6ThXg) | [Boston Techcollective Cooperative](https://drive.google.com/file/d/0B7aFfmk4wQfbbWxoYjNPVEVGbjg/view?resourcekey=0-ejmpEn33O9JxmiOXgF-tMA)
+
+- Membership
+    - Classes
+    - Definition
+    - Becoming a Member
+    - Candidacy Period
+    - Acceptance of Members
+    - Transferability of Memberships
+- Termination of Membership
+    - Resignation
+    - Death
+    - Expulsion
+- Member Meetings
+    - Distinction
+    - Voting
+    - No annual meeting required
+    - Special Member Meetings
+    - Notices Generally
+    - Meetings Held Without Proper Notice
+    - Use of Written Ballots At Meetings
+    - Use of Written Ballots Without Meeting
+    - Quorum
+    - Loss of Quorum at a Meeting
+    - Adjournment for Lack of Quorum
+    - Adjourned Meetings
+    - Action Without Meetings
+- Board of Director Meetings
+    - Directors and Board Composition
+    - Director Voting
+    - Notice of Board Meetings
+    - Waiver of Notice
+    - Quorum
+    - Loss of Quorum at a Meeting
+    - Adjournment for Lack of Quorum
+    - Adjourned Meetings
+    - Action Without Meetings
+    - Removal and Resignation
+    - Empowered Committees
+- Decision-Making Process
+    - Decision-Making Process for Directors and Members
+- Officers
+    - Titles of Officers
+        - President
+        - Secretary
+        - CFO
+    - Duties of Officers
+    - Nomination and Election of Officers
+    - Resignation or Removal of Officers
+- Financial Provisions
+- Corporate Records and Reports
+    - Records Required to be Kept
+    - Inspection Rights
+    - Annual Report
+- Indemnification
+- Bylaws Changes
