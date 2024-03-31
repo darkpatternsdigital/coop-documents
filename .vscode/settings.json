@@ -1,0 +1,6 @@
+{
+    "tailwindCSS.includeLanguages": {
+        "astro": "html"
+    },
+    "tailwindCSS.experimental.configFile": "astro/src/tailwind.config.mts"
+}
