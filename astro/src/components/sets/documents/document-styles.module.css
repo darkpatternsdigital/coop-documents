@@ -1,0 +1,19 @@
+ol.subsectionNumbering {
+    --indentSize: 5rem;
+    --paddingSize: 3rem;
+    counter-reset: item;
+    margin-left: var(--indentSize);
+}
+
+ol.subsectionNumbering li:before {
+    content: counter(section) '.' counter(item) '.';
+    counter-increment: item;
+    display: inline-block;
+    position: relative;
+    margin-left: calc(-1 * var(--paddingSize));
+    width: calc(var(--paddingSize) - 0.25rem);
+}
+
+ol.subsectionNumbering li > p:first-child {
+    display: contents;
+}

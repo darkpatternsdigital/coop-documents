@@ -7,10 +7,10 @@ import { getArticleNumber } from "./getArticleNumber";
 import { romanize } from "./romanize";
 
 export function articleTitle(headings: MarkdownHeading[]) {
-    return function ArticleTitle({ id, children, className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
+    return function ArticleTitle({ id, children, className, style, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
         const articleNumber = getArticleNumber(useAtomValue(currentHeadings), id ?? '');
         return (
-            <Heading.h2 id={id} {...props}>
+            <Heading.h2 id={id} {...props} style={{ ...style, counterSet: `section ${articleNumber}` }}>
                 Article {romanize(articleNumber)}
                 <br/>
                 {children}
