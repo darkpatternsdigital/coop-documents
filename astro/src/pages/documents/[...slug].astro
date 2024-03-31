@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import { documentComponents } from '../../components/sets/documents';
+import { getDocumentComponents } from '../../components/sets/documents';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('documents');
@@ -14,5 +14,5 @@ const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
 ---
 <Layout {...entry.data} className="font-serif">
-  <Content components={documentComponents(headings)} />
+  <Content components={getDocumentComponents(headings)} />
 </Layout>
