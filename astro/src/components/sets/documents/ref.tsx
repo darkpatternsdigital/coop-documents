@@ -4,5 +4,5 @@ import { romanize } from './romanize';
 
 export function Ref({ to }: { to: string }) {
     const articleNumber = useArticleNumber(createSlug(to));
-    return <>Article {romanize(articleNumber)}</>;
+    return <>ARTICLE {romanize(articleNumber)}</>;
 }
