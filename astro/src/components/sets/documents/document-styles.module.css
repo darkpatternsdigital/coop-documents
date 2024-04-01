@@ -1,5 +1,5 @@
 ol.subsectionNumbering {
-    --indentSize: 5rem;
+    --indentSize: 3rem;
     --paddingSize: 3rem;
     counter-reset: item;
     margin-left: var(--indentSize);
@@ -16,4 +16,18 @@ ol.subsectionNumbering li:before {
 
 ol.subsectionNumbering li > p:first-child {
     display: contents;
+}
+
+ol.subsectionNumbering li ol {
+    counter-reset: item;
+    margin-left: var(--indentSize);
+}
+
+ol.subsectionNumbering li ol li:before {
+    content: '(' counter(item, lower-alpha) ')';
+    counter-increment: item;
+    display: inline-block;
+    position: relative;
+    margin-left: calc(-1 * var(--paddingSize));
+    width: calc(var(--paddingSize) - 0.25rem);
 }
