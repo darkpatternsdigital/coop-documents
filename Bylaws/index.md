@@ -1,7 +1,26 @@
 # Bylaws
 
-[WIP Document](./document) | [Sample](https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-Ldj_CiYRwRyAUyaGo6ThXg) | [Boston Techcollective Cooperative](https://drive.google.com/file/d/0B7aFfmk4wQfbbWxoYjNPVEVGbjg/view?resourcekey=0-ejmpEn33O9JxmiOXgF-tMA)
+[WIP Document](./document) |
+[Sample](https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-Ldj_CiYRwRyAUyaGo6ThXg)
+| [Boston Techcollective
+Cooperative](https://drive.google.com/file/d/0B7aFfmk4wQfbbWxoYjNPVEVGbjg/view?resourcekey=0-ejmpEn33O9JxmiOXgF-tMA)
 
+Alternatives:
+- [Sample with Two Classes at page
+  30](https://institute.coop/sites/default/files/ica-model-bylaws.pdf) - this
+  appears to be filed in MA and is structured more like a LLC.
+- [SongADAO
+  Bylaws](https://songadao.org/uploads/short-url/g4SG2dzF59BdgCiCicS95PrJ5bi.pdf),
+  DAO organized as a Colorado LCP with multiple classes of members. DAO's are
+  weird in many ways, though, and it's hard to say if this is actually a good
+  example.
+
+- Corporate Affairs
+    - Name
+    - Fiscal Year
+    - Execution Instruments
+    - Corporate Records
+    - Articles of Incorporation
 - Membership
     - Classes
     - Definition

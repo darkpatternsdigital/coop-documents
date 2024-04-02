@@ -2,7 +2,9 @@ import { createSlug } from '../../../lib/create-slug';
 import { useArticleNumber } from './getArticleNumber';
 import { romanize } from './romanize';
 
-export function Ref({ to }: { to: string }) {
+export function Ref({ to, number, section }: { to: string, number?: boolean, section?: string }) {
     const articleNumber = useArticleNumber(createSlug(to));
+    if (number) return articleNumber;
+    if (section) return <>Section {articleNumber}.{section}</>;
     return <>ARTICLE {romanize(articleNumber)}</>;
 }
