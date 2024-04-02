@@ -1,23 +1,26 @@
 ol.subsectionNumbering {
     --indentSize: 3rem;
-    --paddingSize: 3rem;
     counter-reset: item;
     margin-left: var(--indentSize);
 }
 
-ol.subsectionNumbering li:before {
-    content: counter(section) '.' counters(item, '.');
-    counter-increment: item;
-    display: inline-block;
+ol.subsectionNumbering li {
     position: relative;
-    margin-left: calc(-1 * var(--paddingSize));
-    width: calc(var(--paddingSize) - 0.25rem);
 }
 
-ol.subsectionNumbering li > p:first-child {
-    display: contents;
+ol.subsectionNumbering li:before {
+    /* Float prevents the counter from overlapping the actual text while also
+    preventing any actual space on elements directly descendant of the li*/
+    float: left;
+    counter-increment: item;
+    margin-left: calc(-1 * var(--indentSize));
+
+    /* Default content is Article.Secction.Secction. */
+    content: counter(section) '.' counters(item, '.') '.';
 }
 
+/* Add an element with `data-lower-alpha` immediately around the `ol` to change
+its numbering to lower-alpha */
 ol.subsectionNumbering [data-lower-alpha] > ol > li:before {
     content: '(' counter(item, lower-alpha) ')';
 }
