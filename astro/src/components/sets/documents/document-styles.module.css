@@ -1,5 +1,5 @@
 ol.subsectionNumbering {
-    --indentSize: 3rem;
+    --indentSize: 4rem;
     counter-reset: item;
     margin-left: var(--indentSize);
 }
