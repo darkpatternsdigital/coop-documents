@@ -6,7 +6,7 @@ ol.subsectionNumbering {
 }
 
 ol.subsectionNumbering li:before {
-    content: counter(section) '.' counter(item) '.';
+    content: counter(section) '.' counters(item, '.');
     counter-increment: item;
     display: inline-block;
     position: relative;
@@ -18,16 +18,6 @@ ol.subsectionNumbering li > p:first-child {
     display: contents;
 }
 
-ol.subsectionNumbering li ol {
-    counter-reset: item;
-    margin-left: var(--indentSize);
-}
-
-ol.subsectionNumbering li ol li:before {
+ol.subsectionNumbering [data-lower-alpha] > ol > li:before {
     content: '(' counter(item, lower-alpha) ')';
-    counter-increment: item;
-    display: inline-block;
-    position: relative;
-    margin-left: calc(-1 * var(--paddingSize));
-    width: calc(var(--paddingSize) - 0.25rem);
 }
