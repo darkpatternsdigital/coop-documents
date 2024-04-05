@@ -9,3 +9,7 @@ export function Ref({ to, number, section }: { to: string, number?: boolean, sec
     if (section) return <>Section {articleNumber}.{section}</>;
     return <>ARTICLE {romanize(articleNumber)}</>;
 }
+
+export function makeRef(props: React.ComponentProps<typeof Ref>) {
+    return () => <Ref {...props} />;
+}
