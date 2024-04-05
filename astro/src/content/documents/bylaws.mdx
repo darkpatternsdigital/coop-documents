@@ -6,8 +6,12 @@ description: Tentative Bylaws
 import { organizationName, fiscalYearMonth } from '../../constants';
 import { Ref } from '../../components/sets/documents/ref';
 
+export const workerMember = { to: "Membership", section: "1.1" };
+export const contributorMember = { to: "Membership", section: "1.2" };
 export const candidacyPeriod = { to: "Membership", section: "4" };
+export const memberAcceptance = { to: "Membership", section: "5" };
 export const workerQualificationsSection = { to: "Membership", section: "3.1" };
+export const lossOfMembersQuorum = { to: "Member Meetings", section: "10" };
 export const voteSection = { to: "Decision-Making Process", section: "1" };
 
 {/* Based on
@@ -16,42 +20,21 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
 # Bylaws <br/> of <br/> {organizationName}
 
-## Corporate affairs
-
-1. Name. The name of the cooperative is {organizationName} (hereinafter, the
-   "**Cooperative**").
-2. Fiscal year. The fiscal year of the Cooperative shall end on the last day of
-   _{fiscalYearMonth}_ in each year.
-3. Execution of instruments. All deeds, leases, transfers, contracts, notes,
-   bonds, and other obligations authorized to be executed on behalf of the
-   Cooperative shall be signed by the President or the Treasurer except as
-   otherwise determined from time to time by the Board of Directors.
-4. Corporate records. Copies of the following documents shall be kept at the
-   principal office of the Cooperative or at the office of the Secretary, but
-   need not all be kept at the same office: (a) the Articles of Incorporation
-   and Bylaws, (b) records of all meetings of Incorporators, Directors, and
-   Shareholders, and (c) the stock and transfer records containing the names and
-   record addresses of all Members and Shareholders, and the stock held by each
-   Member and Shareholder.
-5. Articles of Incorporation. The purposes of the Cooperative shall be as set
-   forth in the Articles of Incorporation (hereinafter, the "**Articles**"). In
-   the event of any inconsistency between the Articles and these Bylaws, the
-   provisions of the Articles shall be controlling.
-
 ## Membership
 
 1. Classes of Members. The Cooperative shall have two classes of Members: Worker
-   Members (as defined in Section <Ref to="Membership" number />.1.1) and
-   Producer Members (as defined in Section <Ref to="Membership" number />.1.2).
+   Members (as defined in <Ref {...workerMember} />) and
+   Contributor Members (as defined in <Ref {...contributorMember} />).
    No other classes of Members shall be created unless approved by then-existing
    classes of Members, according these Bylaws.
 
     {/* TODO - definitions */}
-    1. Worker Members. The Worker-member class is reserved for current and former
-       financially compensated workers of the Cooperative.
-    2. Producer Members. The Producer-member class is for all other providers of
-       labor for the Cooperative, including but not limited to contractors,
-       open-source contributors, and active community members.
+    1. Worker Members. The Worker-member class is reserved for current and
+       former workers of the Cooperative who were compensated financially for
+       their work, including but not limited to employment or contracts.
+    2. Contributor Members. The Contributor-member class is for all other
+       providers of labor for the Cooperative, including but not limited to
+       open-source contributors and active community members.
 
 2. Reference to "Member". Any reference to "Member" or "Membership" in these
    Bylaws, without further specification of Member Class, shall mean members of
@@ -59,29 +42,27 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
 3. Becoming a Member. To become a Member of this Cooperative, a person meet the
    eligibility requirements of either class of Members, as detailed below. No
-   person shall be permitted to be a Member in more than once class.
+   person shall be permitted to be a Member in more than one class.
 
     1. Becoming a Worker Member. To become a Worker Member, a person must:
         - Be a resident of the United States of America;
         - Be a worker in the Cooperative, which is a natural person who
           contributes labor or services to the cooperative;
         - Work for the Cooperative for a "Candidacy Period", as described in
-          Section <Ref to="Membership" number />.4.
+          <Ref {...candidacyPeriod} />.
         - Be approved by the existing Members, by means of the process described
-          in Section <Ref to="Membership" number />.4 and <Ref to="Membership"
-          number />.5; and
+          in <Ref {...candidacyPeriod} /> and <Ref {...memberAcceptance} />; and
         - Receive a copy of the Cooperative's Disclosure Statement and Bylaws.
-    2. Becoming a Producer Member. To become a Producer Member, a person must:
+    2. Becoming a Contributor Member. To become a Contributor Member, a person must:
         - Be a resident of the United States of America;
         - Be a contributor to the Cooperative, which is a natural person who has
-          contributed to the Cooperative in any way that would otherwise earn
-          Patronage, as defined in <Ref to="Financial Provisions" />. {/* TODO
-          */}
+          contributed to the Cooperative in a way that would otherwise earn
+          Patronage, as defined in <Ref to="Financial Provisions" />,  within
+          the last 90 days. {/* TODO - is this legally worded appropriately? */}
         - Wait a period equivalent to the "Candidacy Period", as described in
           <Ref {...candidacyPeriod} />.
         - Be approved by the existing Members, by means of the process described
-          in Section <Ref to="Membership" number />.4 and <Ref to="Membership"
-          number />.5; and
+          in <Ref {...candidacyPeriod} /> and <Ref {...memberAcceptance} />; and
         - Receive a copy of the Cooperative's Disclosure Statement and Bylaws.
 
 4. Candidacy Period.
@@ -120,23 +101,23 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
     6. The Cooperative may waive the Candidacy Period and renew a former
        Member's Membership immediately by a 75% vote of all the Members.
 
-    7. The Candidacy Period is waved for a Producer Member seeking to convert to
+    7. The Candidacy Period is waved for a Contributor Member seeking to convert to
        a Worker Member.
 
 6. Transferability of Memberships. Memberships shall be non-assessable and may
    not be transferred, voluntarily or involuntarily, by operation of law or
    otherwise, except for a transfer to the Cooperative under the redemption
-   provisions set forth in the articles of incorporation or in the Cooperative's
-   bylaws.
+   provisions set forth in the Articles of Organization or in the Cooperative's
+   Bylaws.
 
 7. Conversion of Memberships.
 
-    1. Worker Member to Producer Member. A Worker Member may convert their
-       Worker Membership into a Producer Membership with written notice to the
+    1. Worker Member to Contributor Member. A Worker Member may convert their
+       Worker Membership into a Contributor Membership with written notice to the
        Secretary of the Cooperative. The resignation shall become effective
        immediately without any action on the part of the Cooperative.
-    2. Producer Member to Worker Member. A Producer Member may convert their
-       Producer Membership into a Worker Membership by meeting the eligibility
+    2. Contributor Member to Worker Member. A Contributor Member may convert their
+       Contributor Membership into a Worker Membership by meeting the eligibility
        requirements for a Worker Member, as defined by
        <Ref {...workerQualificationsSection} />.
 
@@ -285,7 +266,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
            and one or more of its Directors, or between the Cooperative and any
            corporation, firm, or association in which one or more of its
            Directors has a material financial interest or is a Director;
-        4. Amendment of the articles of incorporation; and
+        4. Amendment of the Articles of Organization; and
         5. Approval of a plan of distribution upon winding up of the Cooperative.
 
 6. Meetings Held Without Proper Notice.
@@ -380,7 +361,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
 11. Adjournment for Lack of Quorum. In the absence of quorum, a majority of
     present Members can vote to adjourn the meeting, and no other business may
-    be transacted, except as provided in Section 3.10 above.
+    be transacted, except as provided in <Ref {...lossOfMembersQuorum} /> above.
 
 12. Adjourned Meetings.
     1. If a meeting is adjourned to a new time/place, Members may conduct any
@@ -427,9 +408,9 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        limits specified, by approval of the Members.
 
     {/* TODO: this section is Matt-legalese; needs to be reviewed/modified */}
-    3. Producer Members shall elect a number of Directors equal to one-fifth of
+    3. Contributor Members shall elect a number of Directors equal to one-fifth of
        the total number of Directors, rounded down, with a minimum of one, not
-       to exceed the total number of Producer Members.
+       to exceed the total number of Contributor Members.
 
     4. All remaining Directors shall be elected from the Worker Members.
 
@@ -610,3 +591,8 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 ## Indemnification
 
 ## Bylaws Changes
+
+## Fiscal year
+
+The fiscal year of the Cooperative shall end on the last day of
+_{fiscalYearMonth}_ in each year.
