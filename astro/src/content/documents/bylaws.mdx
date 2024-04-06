@@ -22,6 +22,7 @@ export const BoardMeetings = makeRef({ to: "Board of Directors Meetings" });
 export const VoteSection = makeRef({ to: "Decision-Making Process", section: "1" });
 export const Patronage = makeRef({ to: "Financial Provisions" });
 export const PeriodicRedemption = makeRef({ to: "Financial Provisions", section: "7.5" })
+export const UnclaimedMoney = makeRef({ to: "Financial Provisions", section: "11" });
 
 {/* Based on
 https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-Ldj_CiYRwRyAUyaGo6ThXg
@@ -437,7 +438,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
     1. A majority of Directors shall constitute a quorum for a Board meeting.
     2. When a quorum is present, proposals shall be adopted using the modified
        consensus process as described in <VoteSection />, unless
-       otherwise required in the articles or bylaws.
+       otherwise required in the Articles or Bylaws.
 
 7. Loss of Quorum at Meeting. If there is a quorum present at the beginning of a
    meeting and then some Directors leave so that less than a quorum remains, the
@@ -682,23 +683,23 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        or residence address.
 
 11. Unclaimed Money. A claim for money against the cooperative shall be subject
-    to the provisions of this Article XI whenever the cooperative is ready,
-    able, and willing to pay the claim, and has paid or is paying generally
-    claims arising under similar circumstances, but payment of the claim cannot
-    be made for the reason that the cooperative does not know the whereabouts or
-    mailing address of the one to whom it is payable or the one entitled to
-    payment. If the claim is not actually paid within a period of three (3)
-    years after notification as herein provided, the cooperative shall remove
-    the claim as a liability on its books. No removal shall be made unless the
-    cooperative shall have sent by first class, United States mail, a written
-    notice of eligibility for payment addressed to the person appearing on the
-    cooperative’s records to be entitled to payment at the last address of such
-    person shown by the records of the cooperative. If not claimed within three
-    (3) years after giving of notice, the claim shall be deemed extinguished.
-    Any and all amounts recovered by the cooperative pursuant to this Article
-    XI, after deducting therefrom the amount of any taxes payable thereon, shall
-    be placed in a reserve or surplus account established previously or
-    hereafter by the cooperative.
+    to the provisions of this <UnclaimedMoney /> whenever the cooperative is
+    ready, able, and willing to pay the claim, and has paid or is paying
+    generally claims arising under similar circumstances, but payment of the
+    claim cannot be made for the reason that the cooperative does not know the
+    whereabouts or mailing address of the one to whom it is payable or the one
+    entitled to payment. If the claim is not actually paid within a period of
+    three (3) years after notification as herein provided, the cooperative shall
+    remove the claim as a liability on its books. No removal shall be made
+    unless the cooperative shall have sent by first class, United States mail, a
+    written notice of eligibility for payment addressed to the person appearing
+    on the cooperative’s records to be entitled to payment at the last address
+    of such person shown by the records of the cooperative. If not claimed
+    within three (3) years after giving of notice, the claim shall be deemed
+    extinguished. Any and all amounts recovered by the cooperative pursuant to
+    this <UnclaimedMoney />, after deducting therefrom the amount of any taxes
+    payable thereon, shall be placed in a reserve or surplus account established
+    previously or hereafter by the cooperative.
 
 ## Corporate Records and Reports
 
