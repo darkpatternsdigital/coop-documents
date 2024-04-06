@@ -6,7 +6,7 @@ import { romanize } from "./romanize";
 export function ArticleTitle({ id, children, className, style, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
     const articleNumber = getArticleNumber(id ?? '');
     return (
-        <Heading.h2 id={id} {...props} style={{ ...style, counterSet: `section ${articleNumber}` }}>
+        <Heading.h2 id={id} {...props} style={{ ...style, counterSet: `article ${articleNumber}` }}>
             Article {romanize(articleNumber)}
             <br/>
             {children}

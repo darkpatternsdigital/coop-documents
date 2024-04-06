@@ -5,7 +5,11 @@ description: Tentative Articles of Organization for filing in Colorado
 
 import { organizationName } from '../../constants';
 import { Address } from '../../components/address';
-import { Ref } from '../../components/sets/documents/ref';
+import { Ref, makeRef } from '../../components/sets/documents/ref';
+
+export const Purpose = makeRef({ to: "Purpose" });
+export const LimitedLiability = makeRef({ to: "Limitation on Director Liability" });
+export const BylawsAmendment = makeRef({ to: "Amendment of Bylaws" });
 
 # Articles of Organization<br/>{organizationName}
 Filed pursuant to § 7-58-302 and § 7-58-303 of the Colorado Revised Statutes
@@ -88,7 +92,7 @@ with the Cooperative's bylaws, as may be amended from time to time
     and the economy of the communities in which the Cooperative operates; and
 
     5. whether the determination of such matter advances the Cooperative's
-    purpose, as defined in <Ref to="Purpose" /> above.
+    purpose, as defined in <Purpose /> above.
     </section>
 
 3. Notwithstanding the foregoing, nothing set forth in Section 6.2 above is
@@ -125,26 +129,24 @@ with the Cooperative's bylaws, as may be amended from time to time
 
 A Director shall not be personally liable to the Cooperative or to the Members
 for monetary damages for breach of fiduciary duty as a Director; except that
-this <Ref to="Limitation on Director Liability" /> shall not eliminate or limit
-the liability of a Director to the Cooperative or to the Members for monetary
-damages otherwise existing for (a) any breach of the Director's duty of loyalty
-to the Cooperative or to the Members; (b) acts or omissions not in good faith or
-which involve intentional misconduct or a knowing violation of law; (c) acts
-specified in Sections 7-58-818 of the ULCAA; (d) acts specified in Section
-7-108-403 of the Colorado Business Corporation Act; or (e) any transaction from
-which such Director directly or indirectly derived any improper personal
-benefit. If the Colorado Business Corporation Act or the ULCAA is hereafter
-amended to eliminate or limit further the liability of a Director, then, in
-addition to the elimination and limitation of liability provided by the
-preceding sentences of this <Ref to="Limitation on Director Liability" />, the
-liability of each Director shall be eliminated or limited to the fullest extent
-permitted by the Colorado Business Corporation Act or ULCAA so amended. Any
-repeal or modification of this <Ref to="Limitation on Director Liability" />
-shall not adversely affect any right or protection of a Director under this <Ref
-to="Limitation on Director Liability" />, as in effect immediately prior to such
-repeal or modification, with respect to any liability that would have accrued,
-but for this <Ref to="Limitation on Director Liability" />, prior to such repeal
-or modification.
+this <LimitedLiability /> shall not eliminate or limit the liability of a
+Director to the Cooperative or to the Members for monetary damages otherwise
+existing for (a) any breach of the Director's duty of loyalty to the Cooperative
+or to the Members; (b) acts or omissions not in good faith or which involve
+intentional misconduct or a knowing violation of law; (c) acts specified in
+Sections 7-58-818 of the ULCAA; (d) acts specified in Section 7-108-403 of the
+Colorado Business Corporation Act; or (e) any transaction from which such
+Director directly or indirectly derived any improper personal benefit. If the
+Colorado Business Corporation Act or the ULCAA is hereafter amended to eliminate
+or limit further the liability of a Director, then, in addition to the
+elimination and limitation of liability provided by the preceding sentences of
+this <LimitedLiability />, the liability of each Director shall be eliminated or
+limited to the fullest extent permitted by the Colorado Business Corporation Act
+or ULCAA so amended. Any repeal or modification of this <LimitedLiability />
+shall not adversely affect any right or protection of a Director under this
+<LimitedLiability />, as in effect immediately prior to such repeal or
+modification, with respect to any liability that would have accrued, but for
+this <LimitedLiability />, prior to such repeal or modification.
 
 ## Indemnification
 
@@ -172,8 +174,7 @@ indemnification shall be limited to the total assets of the Cooperative.
 
 Except for the matters set out C.R.S. 7-58-405 subsection (5), the Board may
 make, amend, or repeal any provision of the Bylaws without Member approval. If
-the Board amends the Bylaws in accordance with this <Ref to="Amendment of
-Bylaws"/>, it shall provide a description of any such amendment to Members in a
+the Board amends the Bylaws in accordance with this <BylawsAmendment />, it shall provide a description of any such amendment to Members in a
 record not later than 30 (thirty) days after the amendment, but the description
 may be provided at the next annual members meeting if the meeting is held within
 the thirty-day period.

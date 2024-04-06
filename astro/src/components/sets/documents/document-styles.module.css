@@ -16,7 +16,7 @@ ol.subsectionNumbering li:before {
     margin-left: calc(-1 * var(--indentSize));
 
     /* Default content is Article.Secction.Secction. */
-    content: counter(section) '.' counters(item, '.') '.';
+    content: counter(article) '.' counters(item, '.') '.';
 }
 
 /* Add an element with `data-lower-alpha` immediately around the `ol` to change
