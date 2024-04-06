@@ -2,5 +2,11 @@
     "tailwindCSS.includeLanguages": {
         "astro": "html"
     },
-    "tailwindCSS.experimental.configFile": "astro/src/tailwind.config.mts"
+    "tailwindCSS.experimental.configFile": "astro/src/tailwind.config.mts",
+    "[mdx]": {
+        "editor.unicodeHighlight.allowedCharacters": {
+            "–": true,
+            "’": true,
+        }
+    }
 }

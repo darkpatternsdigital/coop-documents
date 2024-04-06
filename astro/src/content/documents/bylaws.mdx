@@ -3,7 +3,11 @@ title: Bylaws
 description: Tentative Bylaws
 ---
 
-import { organizationName, fiscalYearMonth } from '../../constants';
+import {
+    organizationName,
+    fiscalYearMonth,
+    membershipCertificateAmount,
+} from '../../constants';
 import { Ref, makeRef } from '../../components/sets/documents/ref';
 
 export const WorkerMember = makeRef({ to: "Membership", section: "1.1" });
@@ -16,6 +20,7 @@ export const LossOfMembersQuorum = makeRef({ to: "Member Meetings", section: "10
 export const BoardMeetings = makeRef({ to: "Board of Directors Meetings" });
 export const VoteSection = makeRef({ to: "Decision-Making Process", section: "1" });
 export const Patronage = makeRef({ to: "Financial Provisions" });
+export const PeriodicRedemption = makeRef({ to: "Financial Provisions", section: "7.5" })
 
 {/* Based on
 https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-Ldj_CiYRwRyAUyaGo6ThXg
@@ -39,18 +44,20 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
     - Be a worker in the Cooperative, which is a natural person who
         contributes labor or services to the cooperative;
     - Work for the Cooperative for a "Candidacy Period", as described in
-        <CandidacyPeriod />.
+        <CandidacyPeriod />;
     - Be approved by the existing Members, by means of the process described
-        in <CandidacyPeriod /> and <MemberAcceptance />; and
-    - Receive a copy of the Cooperative's Disclosure Statement and Bylaws.
+        in <CandidacyPeriod /> and <MemberAcceptance />;
+    - Agree to purchase a membership certificate for
+      {membershipCertificateAmount}; and
+    - Receive a copy of the Cooperative’s Disclosure Statement and Bylaws.
 
 4. Candidacy Period.
 
     1. Persons seeking Membership in the Cooperative must complete a candidacy
        period of at least three (3) months.
-    2. An individual candidate's candidacy period must last no longer than
+    2. An individual candidate’s candidacy period must last no longer than
        twelve (12) months.
-    3. An individual's candidacy period begins when the Board, or a person or
+    3. An individual’s candidacy period begins when the Board, or a person or
        committee appointed by the Board to manage candidacy, declares that
        their candidacy period begins and notifies that candidate that they
        are a candidate.
@@ -74,20 +81,17 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        applicant shall immediately become a Member.
 
     5. The Cooperative may waive the Candidacy Period and renew a former
-       Member's Membership immediately by a 75% vote of all the Members.
-
-    6. The Candidacy Period is waved for a Contributor Member seeking to convert
-       to a Worker Member.
+       Member’s Membership immediately by a 75% vote of all the Members.
 
 6. Transferability of Memberships. Memberships shall be non-assessable and may
    not be transferred, voluntarily or involuntarily, by operation of law or
    otherwise, except for a transfer to the Cooperative under the redemption
-   provisions set forth in the Articles of Organization or in the Cooperative's
+   provisions set forth in the Articles of Organization or in the Cooperative’s
    Bylaws.
 
 8. Consent to Tax Treatment. Each individual or entity which becomes a Member of
    this Cooperative shall by such act alone agree to take into account on the
-   Member's income tax return any Patronage Dividends which are made in
+   Member’s income tax return any Patronage Dividends which are made in
    qualified written notices of allocation at their stated dollar amounts in the
    manner provided in Section 1385(a) of the Internal Revenue Code of 1986, as
    amended (the "Code") in the taxable year in which the Member receives the
@@ -100,7 +104,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 9. Record of Members. A record of the Members and their full names, addresses,
    and, if required for tax reporting purposes, social security or tax
    identification numbers, shall be kept by the Cooperative. Each Member shall
-   notify the Secretary immediately of any change in the Member's address,
+   notify the Secretary immediately of any change in the Member’s address,
    social security number, or tax identification number.
 
 ## Termination of Membership
@@ -127,7 +131,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
     1. A Member may, for any lawful reason, be expelled from the Cooperative by
        a vote pursuant to <VoteSection /> of the Members at a duly
        called meeting at which a quorum is present.
-    2. The Member must be given fifteen (15) days' prior notice of the expulsion,
+    2. The Member must be given fifteen (15) days’ prior notice of the expulsion,
        suspension, or termination, and the reasons for that expulsion,
        suspension, or termination.
     3. The Member shall have an opportunity to be heard, orally or in writing,
@@ -137,7 +141,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
     4. Any notice required under this section may be given by any method
        reasonably calculated to provide actual notice. Any notice given by mail
        must be given by first-class or registered mail sent to the last address
-       of the Member shown on the Cooperative's records.
+       of the Member shown on the Cooperative’s records.
     5. A Member who is expelled or suspended shall be liable for any charges,
        dues, or other obligations incurred before the expulsion, suspension, or
        termination.
@@ -145,8 +149,10 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        to refrain from conducting business as a Member until the expulsion
        decision is made, until the expulsion decision is made. The Cooperative
        may also direct a Member whose expulsion is being considered to stay away
-       from the Cooperative's places of business except as necessary to exercise
+       from the Cooperative’s places of business except as necessary to exercise
        her or his rights under law.
+
+{/* TODO: are termination rights here or in financial provisions? */}
 
 ## Member Meetings
 
@@ -208,7 +214,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
 5. Notices Generally.
 
-    1. Notice of a Members' meeting or any report shall be given by electronic
+    1. Notice of a Members’ meeting or any report shall be given by electronic
        transmission, or by mail or other means of written communication,
        addressed to a Member at the address of such person appearing on the
        books of the Cooperative or given by the person to the Cooperative for
@@ -262,7 +268,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        holding of the meeting, or an approval of the minutes of the meeting. All
        waivers, consents, and approvals shall be filed with the corporate
        records or made a part of the minutes of the meeting.
-    2. Members present: A Member's attendance at a meeting shall constitute a
+    2. Members present: A Member’s attendance at a meeting shall constitute a
        waiver of notice of and presence at the meeting, unless the Member
        objects at the beginning of the meeting. However, attendance at a meeting
        is not a waiver of any right to object to the consideration of matter
@@ -413,8 +419,8 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        effectively communicate, following the notice procedures prescribed in
        these Bylaws. If the day fixed for the regular meeting falls on a legal
        holiday, the meeting shall be held at the same time on the next day.
-    2. Special meetings of the Board shall be held upon four days' notice by
-       first-class mail or 48 hours' notice delivered personally, by telephone,
+    2. Special meetings of the Board shall be held upon four days’ notice by
+       first-class mail or 48 hours’ notice delivered personally, by telephone,
        including a voice messaging system, or by electronic transmission by the
        Cooperative. A notice, or waiver of notice, need not specify the purpose
        of any regular or special meeting of the Board.
@@ -453,7 +459,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 10. Action Without Meeting. The Board of Directors may take action without a
     meeting if all Directors individually or collectively consent in writing to
     the action. The written consents shall be filed with the minutes of the
-    Board's meetings. Action by written consent has the same force and effect as
+    Board’s meetings. Action by written consent has the same force and effect as
     a unanimous vote of the Directors.
 
 11. Removal and Resignation.
@@ -480,7 +486,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
         </section>
     3. Any reduction of the authorized number of Directors does not remove any
-       Director prior to the expiration of the Director's term of office.
+       Director prior to the expiration of the Director’s term of office.
 
 12. Empowered Committees.
 
@@ -536,13 +542,13 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
 2. Duties of Officers.
 
-    1. Officers' duties include those duties:
+    1. Officers’ duties include those duties:
         <section data-lower-alpha>
         1. Prescribed by law,
         2. Granted by these Bylaws, and/or
         3. Granted by resolutions of the Board.
         </section>
-    2. The Secretary must ensure that the Cooperatives' records and reports are
+    2. The Secretary must ensure that the Cooperatives’ records and reports are
        properly kept and filed.
     3. The President shall take on the duties of the Secretary if the Secretary
        is unable or unwilling to do so.
@@ -559,7 +565,139 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
 ## Financial Provisions
 
-{/* TODO */}
+1. Fiscal Year. The fiscal year of the Cooperative shall end on the last day of
+   _{fiscalYearMonth}_ in each year.
+
+2. Definitions.
+    1. "Surplus" shall be defined as the excess of revenues over Expenses for a
+       fiscal year attributable to Member labor.
+    2. "Profit" shall be defined as the excess of revenues over Expenses for a
+       fiscal year attributable to non-Member labor.
+    3. "Loss" shall be defined as the excess of Expenses over revenues for a
+       fiscal year.
+    4. Surplus, Profit, and Loss shall be determined on a tax basis. Surplus and
+       Profit shall not include cash contributions by Members to capital.
+    5. "Expenses" shall include Distributions paid pursuant to Section 7.6,
+       payments of any interest and principal on any debts of the Cooperative,
+       and reasonable reserves as determined by the Board of Directors.
+    6. The "Collective Account" shall be Surplus, Profit, and reserves that are
+       retained in the Cooperative and not distributed to Members.
+    7. "Patronage" shall be defined by the Board {/* TODO: define */}...
+    8. "Patronage Dividends" shall have the definition contained in Internal
+       Revenue Code Section 1388(a) (dividends paid to Members based on
+       Patronage).
+    9. "Member Account" shall be defined as each Member’s capital account in the
+       Cooperative, which is calculated as initial capital contribution plus
+       written notices of allocation minus Distributions minus Losses plus/minus
+       any other item that affects the balance in the Member’s capital account.
+    10. "Distribution" means the distribution of interest on capital
+        contributed, but does not include Patronage Dividends.
+    11. "Deemed Liquidation Event" shall mean (a) a consolidation, merger or
+        other similar transaction of or involving the Corporation in which the
+        Members of the Corporation immediately prior to such consolidation,
+        merger or other similar transaction do not continue to hold, immediately
+        after the consummation of such consolidation, merger or other similar
+        transaction, a majority of the voting power of the equity interests of
+        the surviving entity, or (b) a sale or other transfer of all or
+        substantially all of the Corporation’s assets to a third party.
+
+3. Allocations.
+    1. Any Profit shall be credited to the Collective Account.
+    2. Any Surplus shall be credited to the Collective Account as necessary to
+       bring the year’s contribution to the Collective Account up to 25% of the
+       year’s combined Profit/Surplus. All other Surplus shall be paid as
+       Patronage Dividends in direct proportion to Patronage during the fiscal
+       year.
+    3. Any Loss shall be allocated 75% to Member Accounts in direct proportion
+       to Patronage during the fiscal year and 25% to the Collective Account,
+       with the exception of Losses occurring and/or carried over from the
+       Cooperative’s first two fiscal years, which shall be allocated 100% to
+       the Collective Account.
+    4. The percentages referred to in this section can be changed for a coming
+       fiscal year by the Board.
+
+4. Patronage Dividends.
+
+    1. Patronage Dividends shall be made 50% in cash and 50% to each individual
+       Member Account as a written notice of allocation, unless different
+       proportions are approved by the Board within eight-and-a-half months of
+       the fiscal year’s close – however, at least 20% must be distributed in
+       cash.
+    2. Patronage Dividends may be by qualified or non-qualified written notices
+       of allocation or a combination of the two.
+
+5. Distributions of Interest on Member Accounts. The Cooperative may, by a
+   decision of the Board, pay interest to Members on the Members Accounts. The
+   interest may be paid in cash or as an additional credit to the Member
+   Accounts. The rate of interest shall be determined by the Board, but may not,
+   in one year, exceed 15 percent of each Member’s contributed capital, which
+   includes capital contributions, membership fees, and capital credits.
+
+7. Periodic Redemption of Member Accounts.
+    1. The Cooperative shall aim to pay out in cash to the Members all funds
+       credited to their Member Accounts within three years of the date they
+       were first credited.
+    2. As a general rule, written notices of allocation credited to Member
+       Accounts (including notices now converted to debt) will be paid out in
+       the order in which they are credited, with the oldest paid out first.
+       However, the Board can decide to accelerate the repayment of debt owed to
+       former Members on a case-by-case basis.
+    3. If the Cooperative does not have sufficient funds to pay out all funds
+       credited to Member Accounts for a given fiscal year, then funds will be
+       paid out in proportion to the balance in the Member Accounts.
+
+8. Payment Rights Upon Membership Termination.
+    1. When a Membership is terminated for any reason, including a Member’s
+       death, the amount in the Member Account will automatically be converted
+       to debt owed to the former Member, or, if necessary, to the Member’s
+       estate, or to another assignee designated by the Member.
+    2. The Cooperative shall repay the debt within five years of the Membership
+       termination, with interest accruing at the discount rate – as set by the
+       Federal Reserve Bank of San Francisco – plus two percent, on the amount
+       outstanding at the end of each fiscal year. {/* TODO */}
+    3. The Cooperative, in settling a Member Account, shall have the right to
+       set off any and all indebtedness of the former Member to the Cooperative.
+
+9. Priority of Payments. Notwithstanding anything else to the contrary in this
+   Article, payments by the Cooperative shall be made in the following order of
+   priority:
+    1. First, to make payments of any necessary expenses related to the
+       operation of the cooperative, including wages, and payments of any
+       interest and principal on any debts of the Cooperative,
+    2. Second, to pay Patronage Dividends to all eligible Members,
+    3. Third, to pay Distributions to all eligible Members, and
+    4. Fourth, to make periodic redemptions pursuant to <PeriodicRedemption />.
+
+10. Dissolution Distributions.
+    1. Upon liquidation, dissolution, or sale of the assets of the Cooperative
+       as a Deemed Liquidation Event, any assets left after payment of all debts
+       and Member Account balances shall be distributed to all persons who are
+       current or living past Members in proportion to the number of hours each
+       Member worked during the time he or she was a Member of the Cooperative.
+    2. No distribution need be made to any person who fails to acknowledge the
+       receipt of notice of liquidation in a timely manner. Said notice shall be
+       deemed sufficient if sent by certified mail, at least 30 days before
+       distribution of any residual assets, to the person’s last known business
+       or residence address.
+
+11. Unclaimed Money. A claim for money against the cooperative shall be subject
+    to the provisions of this Article XI whenever the cooperative is ready,
+    able, and willing to pay the claim, and has paid or is paying generally
+    claims arising under similar circumstances, but payment of the claim cannot
+    be made for the reason that the cooperative does not know the whereabouts or
+    mailing address of the one to whom it is payable or the one entitled to
+    payment. If the claim is not actually paid within a period of three (3)
+    years after notification as herein provided, the cooperative shall remove
+    the claim as a liability on its books. No removal shall be made unless the
+    cooperative shall have sent by first class, United States mail, a written
+    notice of eligibility for payment addressed to the person appearing on the
+    cooperative’s records to be entitled to payment at the last address of such
+    person shown by the records of the cooperative. If not claimed within three
+    (3) years after giving of notice, the claim shall be deemed extinguished.
+    Any and all amounts recovered by the cooperative pursuant to this Article
+    XI, after deducting therefrom the amount of any taxes payable thereon, shall
+    be placed in a reserve or surplus account established previously or
+    hereafter by the cooperative.
 
 ## Corporate Records and Reports
 
@@ -580,20 +718,20 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
 2. Inspection Rights.
 
-    1. The Cooperative's Bylaws and Articles shall be open to inspection by the
+    1. The Cooperative’s Bylaws and Articles shall be open to inspection by the
        Members at all reasonable times during office hours.
     2. Any such inspection may be made in person or by agent or attorney and the
        right of inspection includes the right to copy and make extracts.
     3. The accounting books and records and minutes of proceedings of the
        Members and the Board and committees of the Board shall be open to
        inspection upon the written demand on the Cooperative of any Member at
-       any reasonable time, for a purpose reasonably related to such person's
+       any reasonable time, for a purpose reasonably related to such person’s
        interests as a Member.
 
 3. Annual Report.
 
     1. The annual report shall be prepared no later than 120 days after the
-       close of the Cooperative's fiscal year and shall be distributed to
+       close of the Cooperative’s fiscal year and shall be distributed to
        Members at or before their next meeting.
     2. The annual report shall contain in appropriate detail:
 
@@ -629,8 +767,3 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 1. Bylaws Changes. In the circumstances defined in Section 3.2, these Bylaws can
    only be changed by a vote as Members. All other Bylaws changes can be
    effected by a vote as Directors.
-
-## Fiscal year
-
-The fiscal year of the Cooperative shall end on the last day of
-_{fiscalYearMonth}_ in each year.
