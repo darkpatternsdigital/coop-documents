@@ -1,11 +1,13 @@
 # Bylaws
 
 [WIP Document](./document) |
-[Sample](https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-Ldj_CiYRwRyAUyaGo6ThXg)
-| [Boston Techcollective
-Cooperative](https://drive.google.com/file/d/0B7aFfmk4wQfbbWxoYjNPVEVGbjg/view?resourcekey=0-ejmpEn33O9JxmiOXgF-tMA)
+[Textbook](https://www.jrwiener.com/wp-content/uploads/2016/10/Bus-Orgs-Chap-13-Class-Materials.pdf)
+| [California
+Sample](https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-Ldj_CiYRwRyAUyaGo6ThXg)
 
 Alternatives:
+- [Boston Techcollective
+  Cooperative](https://drive.google.com/file/d/0B7aFfmk4wQfbbWxoYjNPVEVGbjg/view?resourcekey=0-ejmpEn33O9JxmiOXgF-tMA)
 - [Sample with Two Classes at page
   30](https://institute.coop/sites/default/files/ica-model-bylaws.pdf) - this
   appears to be filed in MA and is structured more like a LLC.
