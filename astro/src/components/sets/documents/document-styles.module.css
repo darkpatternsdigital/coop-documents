@@ -4,11 +4,11 @@ ol.subsectionNumbering {
     margin-left: var(--indentSize);
 }
 
-ol.subsectionNumbering li {
+ol.subsectionNumbering > li {
     position: relative;
 }
 
-ol.subsectionNumbering li:before {
+ol.subsectionNumbering > li:before {
     /* Float prevents the counter from overlapping the actual text while also
     preventing any actual space on elements directly descendant of the li*/
     float: left;
