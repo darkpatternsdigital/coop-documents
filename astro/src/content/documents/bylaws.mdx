@@ -10,19 +10,21 @@ import {
 } from '../../constants';
 import { Ref, makeRef } from '../../components/sets/documents/ref';
 
-export const WorkerMember = makeRef({ to: "Membership", section: "1.1" });
-export const ContributorMember = makeRef({ to: "Membership", section: "1.2" });
-export const MembershipRequirements = makeRef({ to: "Membership", section: "3" });
-export const CandidacyPeriod = makeRef({ to: "Membership", section: "4" });
-export const MemberAcceptance = makeRef({ to: "Membership", section: "5" });
-export const WorkerQualificationsSection = makeRef({ to: "Membership", section: "3.1" });
-export const VoteByMembers = makeRef({ to: "Member Meetings", section: "2" });
-export const LossOfMembersQuorum = makeRef({ to: "Member Meetings", section: "10" });
-export const BoardMeetings = makeRef({ to: "Board of Directors Meetings" });
-export const VoteSection = makeRef({ to: "Decision-Making Process", section: "1" });
-export const Patronage = makeRef({ to: "Financial Provisions" });
-export const PeriodicRedemption = makeRef({ to: "Financial Provisions", section: "7.5" })
-export const UnclaimedMoney = makeRef({ to: "Financial Provisions", section: "11" });
+export const WorkerMember = makeRef({ comment: "Membership", articleNumber: 1, section: "1" });
+export const MembershipRequirements = makeRef({ comment: "Membership", articleNumber: 1, section: "3" });
+export const CandidacyPeriod = makeRef({ comment: "Membership", articleNumber: 1, section: "4" });
+export const MemberAcceptance = makeRef({ comment: "Membership", articleNumber: 1, section: "5" });
+export const WorkerQualificationsSection = makeRef({ comment: "Membership", articleNumber: 1, section: "3" });
+export const MemberMeetings = makeRef({ comment: "Member Meetings", articleNumber: 3 });
+export const VoteByMembers = makeRef({ comment: "Member Meetings", articleNumber: 3, section: "2" });
+export const LossOfMembersQuorum = makeRef({ comment: "Member Meetings", articleNumber: 3, section: "10" });
+export const BoardMeetings = makeRef({ comment: "Board of Directors Meetings", articleNumber: 4 });
+export const LossOfBoardQuorum = makeRef({ comment: "Board of Directors Meetings", articleNumber: 4, section: "7" });
+export const DecisionMaking = makeRef({ comment: "Decision-Making Process", articleNumber: 5 });
+export const VoteSection = makeRef({ comment: "Decision-Making Process", articleNumber: 5, section: "1" });
+export const Patronage = makeRef({ comment: "Financial Provisions", articleNumber: 7 });
+export const PeriodicRedemption = makeRef({ comment: "Financial Provisions", articleNumber: 7, section: "6" })
+export const UnclaimedMoney = makeRef({ comment: "Financial Provisions", articleNumber: 7, section: "10" });
 
 {/* Based on
 https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-Ldj_CiYRwRyAUyaGo6ThXg
@@ -163,7 +165,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 ## Member Meetings
 
 1. Member Meetings. Member Meetings of the Cooperative in accordance with this
-   <Ref to="Member Meetings" /> may take place in person, by telephone
+   <MemberMeetings/> may take place in person, by telephone
    conference, by internet conference, by video conference, or by any other
    electronic or telecommunications means by which the Members can effectively
    communicate, following the notice procedures prescribed in these Bylaws.
@@ -179,7 +181,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        purposes of this section, all duly prepared and delivered powers of
        attorney shall be considered to be proxies.
     5. Unless otherwise specified, all votes shall be conducted using the
-       processes in <Ref to="Decision-Making Process" />.
+       processes in <DecisionMaking />.
 
 3. Annual Members Meeting. An Member Meeting of all Members shall be held
    annually within 120 days after the close of the fiscal year on a date and at
@@ -346,8 +348,8 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
 9. Quorum. A majority of Members of a class shall constitute a quorum at a
    meeting of Members of that class. When a quorum is present, proposals shall
-   be adopted using the processes as described in <Ref to="Decision-Making
-   Process"/>, unless otherwise required in the Articles or Bylaws.
+   be adopted using the processes as described in <DecisionMaking />, unless
+   otherwise required in the Articles or Bylaws.
 
 10. Loss of Quorum at a Meeting. If there is a quorum present at the beginning
     of a meeting and then some Members leave so that less than a quorum remains,
@@ -453,8 +455,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
 8. Adjournment for Lack of Quorum. In the absence of quorum, a majority of
    present Directors can vote to adjourn the meeting. No other business may be
-   transacted, except as provided in <Ref to="Board of Directors Meetings"
-   section="7" /> above.
+   transacted, except as provided in <LossOfBoardQuorum /> above.
 
 9. Adjourned Meetings. A majority of the Directors present, whether or not a
    quorum is present, may adjourn any meeting to another time and place. If the

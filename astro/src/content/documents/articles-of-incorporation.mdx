@@ -7,9 +7,11 @@ import { organizationName } from '../../constants';
 import { Address } from '../../components/address';
 import { Ref, makeRef } from '../../components/sets/documents/ref';
 
-export const Purpose = makeRef({ to: "Purpose" });
-export const LimitedLiability = makeRef({ to: "Limitation on Director Liability" });
-export const BylawsAmendment = makeRef({ to: "Amendment of Bylaws" });
+export const Purpose = makeRef({ comment: "Purpose", articleNumber: 4 });
+export const BoardConsiderations = makeRef({ comment: "Board of Directors", articleNumber: 7, section: "2" });
+export const LimitedLiability = makeRef({ comment: "Limitation on Director Liability", articleNumber: 8 });
+export const Indemnification = makeRef({ comment: "Indemnification", articleNumber: 9 });
+export const BylawsAmendment = makeRef({ comment: "Amendment of Bylaws", articleNumber: 10 });
 
 # Articles of Organization<br/>{organizationName}
 Filed pursuant to § 7-58-302 and § 7-58-303 of the Colorado Revised Statutes
@@ -97,14 +99,14 @@ with the Cooperative's bylaws, as may be amended from time to time
 
     </section>
 
-3. Notwithstanding the foregoing, nothing set forth in Section 6.2 above is
+3. Notwithstanding the foregoing, nothing set forth in <BoardConsiderations /> above is
    intended to or shall:
 
     <section data-lower-alpha>
 
     1. create any additional fiduciary or other duties of any kind on the part
        of the Cooperative or any Director owed to the Members or any of the parties
-       specified in Section 6.2 above;
+       specified in <BoardConsiderations /> above;
 
     2. increase or expand the liabilities of the Cooperative or any Director or
        otherwise limit any defenses available to the Cooperative or any Director in
@@ -113,7 +115,7 @@ with the Cooperative's bylaws, as may be amended from time to time
 
     3. create any additional or special rights or causes of action in favor of
        the Members or any other third party, including without limitation, any of
-       the third parties specified in this Section 6.2 above.
+       the third parties specified in this <BoardConsiderations /> above.
 
     </section>
 
@@ -168,8 +170,7 @@ has served the Cooperative as Director, officer, employee, fiduciary or agent,
 and the estate and personal representative of any such person, to the extent and
 in the manner provided in any bylaw, resolution of the Board or the Members,
 contract, or otherwise, so long as such provision is legally permissible.
-Notwithstanding anything to the contrary set forth in this <Ref
-to="Indemnification" />, such indemnity shall not extend to conduct not
+Notwithstanding anything to the contrary set forth in this <Indemnification />, such indemnity shall not extend to conduct not
 undertaken in good faith to promote the best interests of the Cooperative, nor
 to any recklessness or willful misconduct; and, provided further, that this
 indemnification shall be limited to the total assets of the Cooperative.
