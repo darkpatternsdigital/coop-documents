@@ -1,5 +1,6 @@
 ---
 import { twMerge } from 'tailwind-merge';
+import { getGitInfo } from './get-git-info'
 
 interface Props {
 	className?: string;
@@ -22,6 +23,10 @@ const { title, className } = Astro.props;
 	<body class={twMerge('my-4 mx-auto max-w-screen-lg print:max-w-none', className)}>
 		<slot />
 	</body>
+	<div class="divFooter">
+		<span class="gitVersion"
+		style={{ '--git-info': `'${await getGitInfo()}'` }}></span>
+	</div>
 </html>
 <style is:global>
 	html {
@@ -31,5 +36,29 @@ const { title, className } = Astro.props;
 
 	@page {
 		margin: 0.5in;
+	}
+	/* @media screen {
+		div.divFooter {
+			display: none;
+		}
+	} */
+	@media print {
+		div.divFooter {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+	.divFooter {
+		display: flex;
+		flex-flow: row;
+		justify-content: end;
+	}
+	.gitVersion::after {
+		font-size: 0.75rem;
+		opacity: 0.5;
+		content: 'unknown';
+		content: var(--git-info);
 	}
 </style>
