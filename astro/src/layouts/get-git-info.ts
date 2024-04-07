@@ -2,6 +2,9 @@ import {execSync} from 'node:child_process';
 
 export function getGitInfo() {
     try {
+        execSync('git update-index --refresh');
+    } catch (error) { }
+    try {
         const tag = execSync('git describe --tags --exact --dirty --broken').toString().trim();
         return Promise.resolve(tag);
     } catch (error) {
