@@ -11,6 +11,8 @@ const documentComponents = {
     p: elementTemplate('Paragraph', 'p', (T) => <T className="my-4" />),
     ol: elementTemplate('OrderedList', 'ol', (T) => <T className={`my-4 ${styles.subsectionNumbering}`} />),
     li: elementTemplate('ListItem', 'li', (T) => <T className="my-4" />),
+    ul: elementTemplate('UnorderedList', 'ul', (T) => <T className={`my-4 ml-6 list-disc`} />),
+    blockquote: elementTemplate('ToDoBlockQuote', 'blockquote', (T) => <T className={`my-4 px-4 border-l-emerald-500 border-l-4`} />),
 };
 
 export function getDocumentComponents(headings: MarkdownHeading[]) {
