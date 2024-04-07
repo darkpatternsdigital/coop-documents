@@ -22,8 +22,8 @@ const { title, className } = Astro.props;
 	</head>
 	<body class={twMerge('my-4 mx-auto max-w-screen-lg print:max-w-none', className)}>
 		<div class="version-header">
-			<span class="gitVersion"
-			style={{ '--git-info': `'${await getGitInfo()}'` }}>Version:&nbsp;</span></div>
+			<span class="gitVersion"style={{ '--git-info': `'${await getGitInfo()}'` }}></span>
+		</div>
 		<slot />
 	</body>
 </html>
