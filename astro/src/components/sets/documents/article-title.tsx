@@ -1,3 +1,4 @@
+import type { MarkdownHeading } from "astro";
 import type React from "react";
 import { Heading } from "./standard-styles";
 import { getArticleNumber } from "./getArticleNumber";

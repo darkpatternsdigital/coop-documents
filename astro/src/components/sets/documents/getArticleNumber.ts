@@ -1,4 +1,3 @@
-import { currentHeadings } from "./current-headings";
 import type { MarkdownHeading } from "astro";
 
 export function getArticleNumber(slug: string, headings: MarkdownHeading[]) {

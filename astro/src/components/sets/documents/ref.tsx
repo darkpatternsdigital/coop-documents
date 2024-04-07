@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import { createSlug } from '../../../lib/create-slug';
 import { romanize } from './romanize';
 
 export function Ref({ articleNumber, section }: { comment: string, articleNumber: number; section?: string }) {
