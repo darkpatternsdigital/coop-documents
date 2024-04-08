@@ -19,13 +19,17 @@ export const MemberMeetings = makeRef({ comment: "Member Meetings", articleNumbe
 export const VoteByMembers = makeRef({ comment: "Member Meetings", articleNumber: 3, section: "2" });
 export const LossOfMembersQuorum = makeRef({ comment: "Member Meetings", articleNumber: 3, section: "10" });
 export const BoardMeetings = makeRef({ comment: "Board of Directors Meetings", articleNumber: 4 });
+export const BoardMeetingsSchedule = makeRef({ comment: "Board of Directors Meetings", articleNumber: 4, section: "4" });
+export const VoteByDirectors = makeRef({ comment: "Board of Directors Meetings", articleNumber: 4, section: "3" });
 export const LossOfBoardQuorum = makeRef({ comment: "Board of Directors Meetings", articleNumber: 4, section: "7" });
-export const DecisionMaking = makeRef({ comment: "Decision-Making Process", articleNumber: 5 });
-export const VoteSection = makeRef({ comment: "Decision-Making Process", articleNumber: 5, section: "1" });
-export const Patronage = makeRef({ comment: "Financial Provisions", articleNumber: 7 });
-export const PeriodicRedemption = makeRef({ comment: "Financial Provisions", articleNumber: 7, section: "6" })
-export const TerminationPayments = makeRef({ comment: "Financial Provisions", articleNumber: 7, section: "8" })
-export const UnclaimedMoney = makeRef({ comment: "Financial Provisions", articleNumber: 7, section: "10" });
+export const DutiesOfDirectors = makeRef({ comment: "Duties of Directors", articleNumber: 5 });
+export const DecisionMaking = makeRef({ comment: "Decision-Making Process", articleNumber: 6 });
+export const VoteSection = makeRef({ comment: "Decision-Making Process", articleNumber: 6, section: "1" });
+export const financialProvisions = { comment: "Financial Provisions", articleNumber: 8 };
+export const Patronage = makeRef({ ...financialProvisions });
+export const PeriodicRedemption = makeRef({ ...financialProvisions, section: "6" })
+export const TerminationPayments = makeRef({ ...financialProvisions, section: "8" })
+export const UnclaimedMoney = makeRef({ ...financialProvisions, section: "10" });
 
 {/* Based on
 https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-Ldj_CiYRwRyAUyaGo6ThXg
@@ -861,12 +865,10 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        Officer of the Cooperative shall certify that the annual report was
        prepared from the books and records of the Cooperative, without audit.
 
-## More sections
+## Disputes
 
-> TODO:
->
-> - Disputes in [textbook](https://www.jrwiener.com/wp-content/uploads/2016/10/Bus-Orgs-Chap-13-Class-Materials.pdf).
-> - Distribution of Bylaws in [textbook](https://www.jrwiener.com/wp-content/uploads/2016/10/Bus-Orgs-Chap-13-Class-Materials.pdf).
+> TODO: Disputes in
+> [textbook](https://www.jrwiener.com/wp-content/uploads/2016/10/Bus-Orgs-Chap-13-Class-Materials.pdf).
 
 ## Indemnification
 
@@ -874,11 +876,23 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
    Officers, Directors, Members, employees, and agents to the fullest extent
    permitted by law.
 
-## Bylaws Changes
+## Amendments
 
-> TODO: This doesn't seem very rigorous. Compare with with [textbook](https://www.jrwiener.com/wp-content/uploads/2016/10/Bus-Orgs-Chap-13-Class-Materials.pdf)
-> example "Amendments".
+1. Amendments requiring vote by Members. Amendments to these bylaws may be
+   proposed by a majority of the board of directors or by petition presented to
+   the secretary and signed by one-tenth (1/10) of the members. If notice of the
+   character of the amendment proposed has been given in the notice of a
+   meeting, these bylaws may be altered or amended at any regular or special
+   meeting of the members by the affirmative vote of three-fourths (3/4) of the
+   members present or voting by mail provided the members so voting have
+   received the exact wording of the amendments.
+2. Amendments not requiring vote by Members. The Board may effect bylaws changes
+   in within <BoardMeetingsSchedule /> or <DutiesOfDirectors /> as a vote as
+   Directors in accordance with <VoteByDirectors />.
 
-1. Bylaws Changes. In the circumstances defined in <VoteByMembers />, these
-   Bylaws can only be changed by a vote as Members. All other Bylaws changes can
-   be effected by a vote as Directors.
+## Distribution of Bylaws
+
+After adoption of these Bylaws or an Amendment to them, a copy of these Bylaws
+or the Amendment, as the case may be, shall be provided to each Member and to
+each person who later becomes a Member as shown on the books of record of the
+cooperative.
