@@ -25,7 +25,8 @@ export const LossOfBoardQuorum = makeRef({ comment: "Board of Directors Meetings
 export const DutiesOfDirectors = makeRef({ comment: "Duties of Directors", articleNumber: 5 });
 export const DecisionMaking = makeRef({ comment: "Decision-Making Process", articleNumber: 6 });
 export const VoteSection = makeRef({ comment: "Decision-Making Process", articleNumber: 6, section: "1" });
-export const financialProvisions = { comment: "Financial Provisions", articleNumber: 8 };
+export const DutiesOfOfficers = makeRef({ comment: "Duties of Officers", articleNumber: 7 });
+export const financialProvisions = { comment: "Financial Provisions", articleNumber: 9 };
 export const Patronage = makeRef({ ...financialProvisions });
 export const PeriodicRedemption = makeRef({ ...financialProvisions, section: "6" })
 export const TerminationPayments = makeRef({ ...financialProvisions, section: "8" })
@@ -581,28 +582,56 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
     3. One person may hold any number of offices, except the President and
        Secretary shall not be the same person.
 
-2. Duties of Officers.
-
-    1. Officers’ duties include those duties:
-        <section data-lower-alpha>
-        1. Prescribed by law,
-        2. Granted by these Bylaws, and/or
-        3. Granted by resolutions of the Board.
-        </section>
-    2. The Secretary must ensure that the Cooperatives’ records and reports are
-       properly kept and filed.
-    3. The President shall take on the duties of the Secretary if the Secretary
-       is unable or unwilling to do so.
-
-3. Nomination and Election of Officers.
+2. Nomination and Election of Officers.
     1. Any Member can nominate any Member, including himself/herself, for any
        office. Nominations and elections shall take place at a regular meeting
        of the Board of Directors.
 
-4. Resignation or Removal of Officers.
+3. Resignation or Removal of Officers.
     1. Officers can be removed by a vote of the Board.
-    2. Any Officer may resign at any time with written notice to the Cooperative.
-    3. Vacancies shall be filled at the next Board meeting.
+    2. The President may be removed at any regular or special meeting of the
+       members by the affirmative vote of one-fifth (1/5) of the members present
+       or voting by mail.
+    3. Any Officer may resign at any time with written notice to the Cooperative.
+    4. Vacancies shall be filled at the next Board meeting.
+
+## Duties of Officers.
+
+1. Officers’ duties include those duties:
+    <section data-lower-alpha>
+    1. Prescribed by law,
+    2. Granted by these Bylaws, and/or
+    3. Granted by resolutions of the Board.
+    </section>
+
+2. Duties of the President. The president shall (1) preside over all meetings of
+   the Cooperative and of the board of directors, (2) call special meetings of
+   the Board of Directors, (3) perform all acts and duties usually performed by
+   a chief executive and presiding officer, and (4) sign all membership
+   certificates and such other papers of the cooperative as he may be authorized
+   or directed to sign by the board of directors; provided, however, that the
+   board of directors may authorize any person to sign any or all checks,
+   contracts and other instruments in writing in behalf of the cooperative. The
+   president shall take on the duties of the Secretary if the Secretary is
+   unable or unwilling to do so. The president shall perform such other duties
+   as may be prescribed by the Board of Directors.
+
+3. Duties of the Secretary. The secretary shall keep a complete record of all
+   meetings of the cooperative and of the board of directors and shall have
+   general charge and supervision of the corporate records of the cooperative.
+   He shall sign all papers pertaining to the cooperative as he may be
+   authorized or directed to sign by the board of directors. He shall serve all
+   notices required by law and by these bylaws and shall make a full report of
+   all matters and business pertaining to his office and to the members at the
+   annual meeting. The duplicate copies of the minutes and complete membership
+   records shall be maintained at the principal office of the cooperative. The
+   secretary shall make corporate reports required by law and shall perform such
+   other duties as may be required of him by the cooperative or by the board of
+   directors. He shall have supervision of the cooperative’s financial records
+   and perform such duties with respect to the finances of the cooperative as
+   may be prescribed by the board of directors. Upon the election of his
+   successor, the secretary shall turn over to him all books and other property
+   belonging to the cooperative that he has in his possession.
 
 ## Financial Provisions
 
@@ -883,8 +912,9 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
    members present or voting by mail provided the members so voting have
    received the exact wording of the amendments.
 2. Amendments not requiring vote by Members. The Board may effect bylaws changes
-   in within <BoardMeetingsSchedule /> or <DutiesOfDirectors /> as a vote as
-   Directors in accordance with <VoteByDirectors />.
+   in within <BoardMeetingsSchedule />, <DutiesOfDirectors />, or
+   <DutiesOfOfficers />, as a vote as Directors in accordance with
+   <VoteByDirectors />.
 
 ## Distribution of Bylaws
 
