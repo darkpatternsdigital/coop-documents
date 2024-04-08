@@ -8,6 +8,7 @@ import styles from './document-styles.module.css';
 
 const documentComponents = {
     h1: Heading.h1,
+    a: elementTemplate('Anchor', 'a', (T) => <T className="text-blue-700 dark:text-blue-400 underline" />),
     p: elementTemplate('Paragraph', 'p', (T) => <T className="my-4" />),
     ol: elementTemplate('OrderedList', 'ol', (T) => <T className={`my-4 ${styles.subsectionNumbering}`} />),
     li: elementTemplate('ListItem', 'li', (T) => <T className="my-4" />),
