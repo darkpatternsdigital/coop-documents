@@ -24,6 +24,7 @@ export const DecisionMaking = makeRef({ comment: "Decision-Making Process", arti
 export const VoteSection = makeRef({ comment: "Decision-Making Process", articleNumber: 5, section: "1" });
 export const Patronage = makeRef({ comment: "Financial Provisions", articleNumber: 7 });
 export const PeriodicRedemption = makeRef({ comment: "Financial Provisions", articleNumber: 7, section: "6" })
+export const TerminationPayments = makeRef({ comment: "Financial Provisions", articleNumber: 7, section: "8" })
 export const UnclaimedMoney = makeRef({ comment: "Financial Provisions", articleNumber: 7, section: "10" });
 
 {/* Based on
@@ -178,6 +179,10 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        may also direct a Member whose expulsion is being considered to stay away
        from the Cooperative’s places of business except as necessary to exercise
        her or his rights under law.
+
+4. Surrender of Membership Certificate. Upon termination from the Cooperative
+   for any reason, the terminated member shall surrender the membership
+   certificate in return for the considerations within <TerminationPayments />.
 
 ## Member Meetings
 
@@ -625,6 +630,9 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        fiscal year attributable to Member labor.
     2. "Profit" shall be defined as the excess of revenues over Expenses for a
        fiscal year attributable to non-Member labor.
+
+        > TODO: How do we calculate this?
+
     3. "Loss" shall be defined as the excess of Expenses over revenues for a
        fiscal year.
     4. Surplus, Profit, and Loss shall be determined on a tax basis. Surplus and
@@ -643,30 +651,34 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
     8. "Patronage".
         > TODO: Check the quality of this definition
 
+        > TODO: Vesting of Patronage? Scale based on Tenure?
+
         <section data-lower-alpha>
 
-        1. Patronage shall be defined the same as Tenure.
-        2. Additional patronage may be allocated according to a Patronage
+        1. Patronage shall be defined as a number as calculated by a Patronage
            Schedule, which must be approved by the board or a committee
            appointed by the board to handle patronage.
-        3. The Patronage Schedule shall have an effective date no earlier than
+        2. The Patronage Schedule shall have an effective date no earlier than
            120 days after approval by the Board.
-        4. Within 30 days of the approval of a new Patronage Schedule, the
+        3. Within 30 days of the approval of a new Patronage Schedule, the
            President or Secretary shall cause notice to be given to the Members
            including the new Patronage Schedule.
-        5. An approved Patronage Schedule may be cancelled prior to its
+        4. An approved Patronage Schedule may be cancelled prior to its
            Effective Date by a vote pursuant to <VoteSection /> of the Members
            at a duly called meeting at which a quorum is present.
+        5. Until a Patronage Schedule takes effect, Patronage shall be defined
+           as the same as Tenure.
 
         </section>
 
     9. "Patronage Dividends" shall have the definition contained in Internal
        Revenue Code Section 1388(a) (dividends paid to Members based on
        Patronage).
-    10. "Member Account" shall be defined as each Member’s capital account in the
-        Cooperative, which is calculated as initial capital contribution plus
-        written notices of allocation minus Distributions minus Losses plus/minus
-        any other item that affects the balance in the Member’s capital account.
+    10. "Member Account" shall be defined as each Member’s capital account in
+        the Cooperative, which is calculated as the purchase price of the
+        membership certificate plus written notices of allocation minus
+        Distributions minus Losses plus/minus any other item that affects the
+        balance in the Member’s capital account.
     11. "Distribution" means the distribution of interest on capital
         contributed, but does not include Patronage Dividends.
     12. "Deemed Liquidation Event" shall mean (a) a consolidation, merger or
@@ -680,7 +692,8 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
 3. Allocations.
 
-    > TODO: check this.
+    > TODO: check this. This can vary greatly between coops and should be
+    > adjusted based on the financial needs of the organization.
 
     1. Any Profit shall be credited to the Collective Account.
     2. Any Surplus shall be credited to the Collective Account as necessary to
@@ -727,7 +740,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        paid out in proportion to the balance in the Member Accounts.
 
 8. Payment Rights Upon Membership Termination.
-    > TODO: Membership certificate buyback?
+    > Aside: Membership certificate price is included in the Member Account.
 
     1. When a Membership is terminated for any reason, including a Member’s
        death, the amount in the Member Account will automatically be converted
@@ -755,11 +768,6 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
     4. Fourth, to make periodic redemptions pursuant to <PeriodicRedemption />.
 
 10. Dissolution Distributions.
-
-    > TODO: Compare with
-    > [textbook](https://www.jrwiener.com/wp-content/uploads/2016/10/Bus-Orgs-Chap-13-Class-Materials.pdf)
-    > example "Dissolution". May need priorities of payments more clearly
-    > defined.
 
     1. Upon liquidation, dissolution, or sale of the assets of the Cooperative
        as a Deemed Liquidation Event, any assets left after payment of all debts
