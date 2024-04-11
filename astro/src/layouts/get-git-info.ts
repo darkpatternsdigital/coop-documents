@@ -5,6 +5,6 @@ export function getGitInfo() {
         execSync('git update-index --refresh');
     } catch (error) { }
 
-    const result = execSync('git describe --tags --dirty --broken').toString().trim();
+    const result = execSync('git describe --always --tags --dirty --broken').toString().trim();
     return Promise.resolve(`${result}`);
 }
