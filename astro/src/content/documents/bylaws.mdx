@@ -16,6 +16,7 @@ export const CandidacyPeriod = makeRef({ comment: "Membership", articleNumber: 1
 export const MemberAcceptance = makeRef({ comment: "Membership", articleNumber: 1, section: "5" });
 export const WorkerQualificationsSection = makeRef({ comment: "Membership", articleNumber: 1, section: "3" });
 export const MembershipTermination = makeRef({ comment: "Termination of Membership", articleNumber: 2 });
+export const MembershipPropertyRights = makeRef({ comment: "Rights and Interest on Withdrawal or Termination", articleNumber: 2, section: "4" })
 export const MemberMeetings = makeRef({ comment: "Member Meetings", articleNumber: 3 });
 export const VoteByMembers = makeRef({ comment: "Member Meetings", articleNumber: 3, section: "2" });
 export const LossOfMembersQuorum = makeRef({ comment: "Member Meetings", articleNumber: 3, section: "10" });
@@ -28,10 +29,9 @@ export const DecisionMaking = makeRef({ comment: "Decision-Making Process", arti
 export const VoteSection = makeRef({ comment: "Decision-Making Process", articleNumber: 6, section: "1" });
 export const DutiesOfOfficers = makeRef({ comment: "Duties of Officers", articleNumber: 7 });
 export const financialProvisions = { comment: "Financial Provisions", articleNumber: 9 };
-export const Patronage = makeRef({ ...financialProvisions });
-export const PeriodicRedemption = makeRef({ ...financialProvisions, section: "6" })
-export const TerminationPayments = makeRef({ ...financialProvisions, section: "8" })
-export const UnclaimedMoney = makeRef({ ...financialProvisions, section: "10" });
+export const Patronage = makeRef({ ...financialProvisions, comment: "Patronage", section: "2.8" });
+export const PeriodicRedemption = makeRef({ ...financialProvisions, comment: "Periodic Redemption of Member Accounts", section: "6" })
+export const UnclaimedMoney = makeRef({ ...financialProvisions, comment: "Unclaimed Money", section: "9" });
 
 {/* Based on
 https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-Ldj_CiYRwRyAUyaGo6ThXg
@@ -174,11 +174,31 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        from the Cooperative’s places of business except as necessary to exercise
        her or his rights under law.
 
-4. Surrender of Membership Certificate. Upon termination from the Cooperative
-   for any reason, the terminated member shall surrender the membership
-   certificate in return for the considerations within <TerminationPayments />.
+4. Rights and Interest on Withdrawal or Termination. On the date at which a
+   member’s written notice of intent to withdraw becomes effective or upon the
+   termination of his membership in the cooperative by the board of directors,
+   all rights and interests of the member in the cooperative shall cease and the
+   member shall be entitled only to payment for the value of the member’s
+   property rights and interest in the cooperative, as defined in this
+   <MembershipPropertyRights />, which shall be equitably and conclusively
+   appraised by the board of directors. The property rights and interest of
+   member are defined to mean  the amount paid by the member for membership
+   certificates acquired as a condition for membership in the cooperative.
 
-   > TODO: revise this so that the membership certificate is repurchased by the coop
+   Within one (1) year after the effective date of the member’s withdrawal or
+   termination, the cooperative shall pay to the member the price paid by the
+   member for the member’s membership certificates.
+
+5. Payment of Equity Capital. Subsequent to the effective date of a member’s
+   withdrawal or termination of membership in the cooperative, the member shall
+   also be entitled to the repayment of, in addition to his property rights and
+   interest in the cooperative defined above, the member’s Member Account in
+   accordance with the terms and conditions of <PeriodicRedemption />, as and
+   when such Member Account becomes payable to other members in the member’s
+   class under that Section. Any interest bearing certificates of indebtedness
+   issued by the cooperative to a member pursuant to the provisions of
+   <PeriodicRedemption />, shall effect a complete and total release of the
+   obligations of the cooperative to the member with respect to equity.
 
 ## Member Meetings
 
@@ -736,13 +756,9 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        Revenue Code Section 1388(a) (dividends paid to Members based on
        Patronage).
     10. "Member Account" shall be defined as each Member’s capital account in
-        the Cooperative, which is calculated as the purchase price of the
-        membership certificate plus written notices of allocation minus
-        Distributions minus Losses plus/minus any other item that affects the
-        balance in the Member’s capital account.
-
-        > TODO: Move membership certificate out of the Member Account
-
+        the Cooperative, which is calculated as written notices of allocation
+        minus Distributions minus Losses plus/minus any other item that affects
+        the balance in the Member’s capital account.
     11. "Distribution" means the distribution of interest on capital
         contributed, but does not include Patronage Dividends.
     12. "Deemed Liquidation Event" shall mean (a) a consolidation, merger or
@@ -790,7 +806,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
    in one year, exceed 15 percent of each Member’s contributed capital, which
    includes capital contributions, membership fees, and capital credits.
 
-7. Periodic Redemption of Member Accounts.
+6. Periodic Redemption of Member Accounts.
     1. No acquisition, recall or redemption of Member Accounts in the
        cooperative shall be made if the result of it would be to render the
        cooperative unable to pay its debts as they become due in the usual
@@ -811,17 +827,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        credited to Member Accounts for a given fiscal year, then funds will be
        paid out in proportion to the balance in the Member Accounts.
 
-8. Payment Rights Upon Membership Termination.
-    > TODO: Include buyback of membership certificate
-
-    1. When a Membership is terminated for any reason, including a Member’s
-       death, the amount in the Member Account will automatically be converted
-       to debt owed to the former Member, or, if necessary, to the Member’s
-       estate, or to another assignee designated by the Member.
-    2. The Cooperative, in settling a Member Account, shall have the right to
-       set off any and all indebtedness of the former Member to the Cooperative.
-
-9. Priority of Payments. Notwithstanding anything else to the contrary in this
+7. Priority of Payments. Notwithstanding anything else to the contrary in this
    Article, payments by the Cooperative shall be made in the following order of
    priority:
     1. First, to make payments of any necessary expenses related to the
@@ -831,7 +837,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
     3. Third, to pay Distributions to all eligible Members, and
     4. Fourth, to make periodic redemptions pursuant to <PeriodicRedemption />.
 
-10. Dissolution Distributions.
+8. Dissolution Distributions.
 
     1. Upon liquidation, dissolution, or sale of the assets of the Cooperative
        as a Deemed Liquidation Event, any assets left after payment of all debts
@@ -844,26 +850,26 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        distribution of any residual assets, to the person’s last known business
        or residence address.
 
-11. Unclaimed Money. A claim for money against the cooperative shall be subject
-    to the provisions of this <UnclaimedMoney /> whenever the cooperative is
-    ready, able, and willing to pay the claim, and has paid or is paying
-    generally claims arising under similar circumstances, but payment of the
-    claim cannot be made for the reason that the cooperative does not know the
-    whereabouts or mailing address of the one to whom it is payable or the one
-    entitled to payment. If the claim is not actually paid within a period of
-    three (3) years after notification as herein provided, the cooperative shall
-    remove the claim as a liability on its books. No removal shall be made
-    unless the cooperative shall have sent by first class, United States mail, a
-    written notice of eligibility for payment addressed to the person appearing
-    on the cooperative’s records to be entitled to payment at the last address
-    of such person shown by the records of the cooperative. If not claimed
-    within three (3) years after giving of notice, the claim shall be deemed
-    extinguished. Any and all amounts recovered by the cooperative pursuant to
-    this <UnclaimedMoney />, after deducting therefrom the amount of any taxes
-    payable thereon, shall be placed in a reserve or surplus account established
-    previously or hereafter by the cooperative.
+9. Unclaimed Money. A claim for money against the cooperative shall be subject
+   to the provisions of this <UnclaimedMoney /> whenever the cooperative is
+   ready, able, and willing to pay the claim, and has paid or is paying
+   generally claims arising under similar circumstances, but payment of the
+   claim cannot be made for the reason that the cooperative does not know the
+   whereabouts or mailing address of the one to whom it is payable or the one
+   entitled to payment. If the claim is not actually paid within a period of
+   three (3) years after notification as herein provided, the cooperative shall
+   remove the claim as a liability on its books. No removal shall be made unless
+   the cooperative shall have sent by first class, United States mail, a written
+   notice of eligibility for payment addressed to the person appearing on the
+   cooperative’s records to be entitled to payment at the last address of such
+   person shown by the records of the cooperative. If not claimed within three
+   (3) years after giving of notice, the claim shall be deemed extinguished. Any
+   and all amounts recovered by the cooperative pursuant to this <UnclaimedMoney
+   />, after deducting therefrom the amount of any taxes payable thereon, shall
+   be placed in a reserve or surplus account established previously or hereafter
+   by the cooperative.
 
-12. Borrowed Capital. This Cooperative may borrow such additional capital from
+11. Borrowed Capital. This Cooperative may borrow such additional capital from
     Members or any other person or source as permitted by law. It may issue
     notes or certificates of indebtedness for amounts of borrowed money with
     such terms and conditions and on which it may pay an interest rate as
