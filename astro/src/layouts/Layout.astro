@@ -20,7 +20,7 @@ const { title, className } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class={twMerge('my-4 mx-auto max-w-screen-lg print:max-w-none', className)}>
+	<body class={twMerge('my-4 mx-auto px-4 max-w-screen-lg print:max-w-none print:px-0', className)}>
 		<div class="version-header">
 			<span class="gitVersion"></span>
 		</div>
