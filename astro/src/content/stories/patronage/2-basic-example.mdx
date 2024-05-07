@@ -1,0 +1,14 @@
+---
+title: Patronage Basic Example
+description: A simple example on how Patronage is intended to work
+order: 10
+---
+
+import { PatronageRecord } from '../../../business-logic/patronage';
+
+export const patronageExample = new PatronageRecord()
+    .add('2024-05-01', 'addMember', { name: 'Alf', tenureRatePerWeek: 5 })
+    .add('2024-08-01', 'addMember', { name: 'Betty', tenureRatePerWeek: 5 })
+    .add('2025-01-01', 'addMember', { name: 'Caitlin', tenureRatePerWeek: 5 })
+
+<pre>{JSON.stringify(patronageExample.events, undefined, '  ')}</pre>
