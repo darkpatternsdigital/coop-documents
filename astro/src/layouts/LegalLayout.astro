@@ -6,10 +6,9 @@ interface Props {
 	className?: string;
 	title: string;
 	description: string;
-	frontmatter?: object;
 }
 
-const { title, description, className } = { ...Astro.props.frontmatter, ...Astro.props };
+const { title, description, className } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,7 +21,7 @@ const { title, description, className } = { ...Astro.props.frontmatter, ...Astro
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class={twMerge('my-4 mx-auto px-4 max-w-screen-lg print:max-w-none print:px-0', className)}>
+	<body class={twMerge('my-4 mx-auto px-4 max-w-screen-lg print:max-w-none print:px-0 font-serif', className)}>
 		<div class="version-header">
 			<span class="gitVersion"></span>
 		</div>
@@ -33,5 +32,20 @@ const { title, description, className } = { ...Astro.props.frontmatter, ...Astro
 	html {
 		background: white;
 		color: black;
+	}
+
+	@page {
+		margin: 1in;
+	}
+	.version-header {
+		font-size: 0.75rem;
+		opacity: 0.5;
+		display: flex;
+		flex-flow: row;
+		justify-content: end;
+	}
+	.gitVersion::after {
+		content: 'unknown';
+		content: var(--git-info);
 	}
 </style>
