@@ -1,7 +1,35 @@
-@import url(./md-styles.module.css);
 
-.container {
-    composes: container from './md-styles.module.css';
+.container :global h1 {
+    @apply text-lg font-bold text-center;
+    font-variant: small-caps;
+}
+
+.container :global h2 {
+    @apply font-bold text-center;
+    counter-increment: article;
+    font-variant: small-caps;
+}
+
+.container :global a {
+    @apply text-blue-700 dark:text-blue-400 underline;
+}
+.container :global p {
+    @apply my-4;
+}
+.container :global ol {
+    @apply my-4;
+    --indentSize: 4rem;
+    counter-reset: item;
+    margin-left: var(--indentSize);
+}
+.container :global li {
+    @apply my-4;
+}
+.container :global ul {
+    @apply my-4 ml-6 list-disc;
+}
+.container :global blockquote {
+    @apply my-4 px-4 border-l-emerald-500 border-l-4;
 }
 
 .container :global h2:before {
