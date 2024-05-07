@@ -1,6 +1,7 @@
 ---
 import { twMerge } from 'tailwind-merge';
 import { getGitInfo } from './get-git-info'
+import legalStyles from '../components/sets/documents/legal-styles.module.css';
 
 interface Props {
 	className?: string;
@@ -25,7 +26,9 @@ const { title, description, className } = Astro.props;
 		<div class="version-header">
 			<span class="gitVersion"></span>
 		</div>
-		<slot />
+		<div class={legalStyles.container}>
+			<slot />
+		</div>
 	</body>
 </html>
 <style is:global>

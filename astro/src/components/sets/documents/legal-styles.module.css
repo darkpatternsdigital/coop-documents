@@ -1,14 +1,21 @@
-ol.subsectionNumbering {
-    --indentSize: 4rem;
-    counter-reset: item;
-    margin-left: var(--indentSize);
+@import url(./md-styles.module.css);
+
+.container {
+    composes: container from './md-styles.module.css';
 }
 
-ol.subsectionNumbering > li {
+.container :global h2:before {
+    display: block;
+
+    /* Default content is Article.Secction.Secction. */
+    content: 'Article ' counter(article, upper-roman);
+}
+
+.container :global ol > li {
     position: relative;
 }
 
-ol.subsectionNumbering > li:before {
+.container :global ol > li:before {
     /* Float prevents the counter from overlapping the actual text while also
     preventing any actual space on elements directly descendant of the li*/
     float: left;
@@ -21,6 +28,6 @@ ol.subsectionNumbering > li:before {
 
 /* Add an element with `data-lower-alpha` immediately around the `ol` to change
 its numbering to lower-alpha */
-ol.subsectionNumbering [data-lower-alpha] > ol > li:before {
+.container :global ol [data-lower-alpha] > ol > li:before {
     content: '(' counter(item, lower-alpha) ')';
 }

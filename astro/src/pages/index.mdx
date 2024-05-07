@@ -5,9 +5,9 @@ description: Tentative legal documents for Dark Patterns Digital, LCA (Dark Patt
 ---
 
 import { organizationName, orgAbbrev } from '../constants'
-import { getDocumentComponents } from '../components/sets/documents';
+import mdStyles from '../components/sets/documents/md-styles.module.css';
 
-export const components = getDocumentComponents([]);
+<div class={mdStyles.container}>
 
 # {organizationName} Documents
 
@@ -19,3 +19,5 @@ Documents for {organizationName} (**{orgAbbrev}**), a Limited Cooperative Associ
 # Rendering to PDF
 
 For now, open each page and use "Print to PDF" within your browser.
+
+</div>

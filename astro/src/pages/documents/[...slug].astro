@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/LegalLayout.astro';
-import { getDocumentComponents } from '../../components/sets/documents';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('documents');
@@ -11,8 +10,8 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content, headings } = await entry.render();
+const { Content } = await entry.render();
 ---
 <Layout {...entry.data}>
-  <Content components={getDocumentComponents(headings)} />
+  <Content />
 </Layout>
