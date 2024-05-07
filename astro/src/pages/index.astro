@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import mdStyles from '../components/sets/documents/md-styles.module.css'
+import { organizationName, orgAbbrev } from '../constants'
+
+const documents = await getCollection('documents');
+---
+
+<Layout
+    title="Dark Patterns Digital documents"
+    description='Tentative legal documents for Dark Patterns Digital, LCA (Dark Patterns Digital), a Limited Cooperative Association'
+    className={mdStyles.container}>
+
+    <h1>{organizationName} Documents</h1>
+
+    <p>Documents for {organizationName} (**{orgAbbrev}**), a Limited Cooperative Association registered in the state of Colorado.</p>
+
+    <ul>
+        {documents.map((entry) =>
+            <li>
+                <a href={`/documents/${entry.slug}`}>{entry.data.title}</a>
+            </li>)}
+    </ul>
+
+    <h2>Rendering to PDF</h2>
+
+    <p>For now, open each page and use "Print to PDF" within your browser.</p>
+
+</Layout>

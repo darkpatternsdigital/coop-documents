@@ -3,7 +3,7 @@ import { twMerge } from 'tailwind-merge';
 import { getGitInfo } from './get-git-info'
 
 interface Props {
-	className?: string;
+	className?: string | undefined;
 	title: string;
 	description: string;
 	frontmatter?: object;
