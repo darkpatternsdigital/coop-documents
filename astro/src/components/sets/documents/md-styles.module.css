@@ -1,16 +1,16 @@
 
 .container :global h1 {
-    @apply text-2xl font-bold;
+    @apply text-2xl font-bold mt-8 mb-4;
     font-variant: small-caps;
 }
 
 .container :global h2 {
-    @apply text-xl font-bold;
+    @apply text-xl font-bold mt-8 mb-4;
     font-variant: small-caps;
 }
 
 .container :global h3 {
-    @apply text-lg font-bold;
+    @apply text-lg font-bold mt-8 mb-4;
     font-variant: small-caps;
 }
 

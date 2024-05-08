@@ -1,5 +1,5 @@
 import { compareAsc, format } from 'date-fns';
-import type { PatronageEntry } from "../../business-logic/patronage";
+import type { PatronageSnapshot } from "../../business-logic/patronage";
 const { amber, blue, cyan, emerald, orange, purple, rose } = (await import('tailwindcss/colors')).default;
 
 const colorIndices = [
@@ -26,11 +26,12 @@ const colors = (Array(colorIndices.length * colorMaps.length).fill(0).map((_, in
     return colorRange[colorIndices[index % colorIndices.length]!];
 }))
 
-export function PointInTime({ data, membersOrder }: { data: Record<string, PatronageEntry>, membersOrder?: string[] }) {
+export function PointInTime({ data: { date, details: data}, membersOrder }: { data: PatronageSnapshot; membersOrder?: string[] }) {
     const allEntries = Object.entries(data);
     const order = membersOrder ?? allEntries.sort((a, b) => compareAsc(a[1].memberDate, b[1].memberDate)).map(([name]) => name);
     return (
         <>
+            <span>{format(date, 'MMM d, yyyy')}</span>
             <div className="flex gap-1">
                 {order.map((name, index) =>
                     <div className="h-4" key={name} style={{ background: colors[index], flexBasis: 0, flexGrow: data[name]?.patronageYTD }}></div>

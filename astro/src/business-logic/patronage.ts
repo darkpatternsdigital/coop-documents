@@ -22,6 +22,11 @@ export type PatronageEntry = {
     patronageYTD: number;
 };
 
+export type PatronageSnapshot = {
+    date: Date;
+    details: Record<string, PatronageEntry>;
+}
+
 function normalizeDate(date: Date | string): Date {
     return typeof date === 'string' ? parseISO(date) : date;
 }
@@ -55,10 +60,10 @@ export class PatronageRecord {
         return this;
     }
 
-    getDetailsAt(date: Date | string): Record<string, PatronageEntry> {
+    getDetailsAt(date: Date | string): PatronageSnapshot {
         date = normalizeDate(date);
         const results: Record<string, PatronageEntry> = {};
-        if (!this.events[0]) return results;
+        if (!this.events[0]) return { date, details: results };
         let nextEvent: PatronageEvent | undefined;
         for (let current = this.events[0].date, nextEventIndex = 0; current <= date; current = addDays(current, 1)) {
             // reset from end of year
@@ -105,7 +110,7 @@ export class PatronageRecord {
             const base = entry.tenureYTD + entry.patronageScheduleYTD;
             entry.patronageYTD = base + Math.min(entry.tenure, base * 2);
         }
-        return results;
+        return { date, details: results };
     }
 
     get allEvents() { return [...this.events]; }
