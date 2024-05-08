@@ -5,10 +5,51 @@ order: 10
 ---
 
 import { PatronageRecord } from '../../../business-logic/patronage';
+import { PointInTime } from '../../../components/patronage/point-in-time';
 
 export const patronageExample = new PatronageRecord()
-    .add('2024-05-01', 'addMember', { name: 'Alf', tenureRatePerWeek: 5 })
-    .add('2024-08-01', 'addMember', { name: 'Betty', tenureRatePerWeek: 5 })
-    .add('2025-01-01', 'addMember', { name: 'Caitlin', tenureRatePerWeek: 5 })
+    .add('2024-04-29', 'addMember', { name: 'Alfred', tenureRatePerWeek: 5 })
+    .add('2024-07-29', 'addMember', { name: 'Betty', tenureRatePerWeek: 5 })
+    .add('2024-12-30', 'addMember', { name: 'Caitlin', tenureRatePerWeek: 5 })
 
-<pre>{JSON.stringify(patronageExample.events, undefined, '  ')}</pre>
+As a simple example, let's consider the following events:
+
+1. On Monday, April 29, 2024, Alfred starts the coop and he is all in, working a full-time
+   40-hours every week. Every week, Alfred earns 5 tenure points.
+2. On Monday, July 29, 2024, Betty joins Alfred, working a full-time 40 hours every
+   week. Starting from then, both Alfred and Betty are earning 5 tenure points
+   every week.
+3. On Monday, December 30, 2024, Caitlin joins them both, also managing a full-time 40
+   hours every week. Starting with the end of that week, all three of them are
+   earning 5 tenure points every week.
+
+Before Betty joined, it didn't matter how much Alfred earned; any surplus
+distributed would be allocated entirely to him.
+
+<PointInTime data={patronageExample.getDetailsAt('2024-07-27')} />
+
+However, the week after Betty starts, Betty begins to accumulate patronage:
+
+<PointInTime data={patronageExample.getDetailsAt('2024-08-03')} />
+
+By the end of Q3, Betty has worked for 2 full months and Alfred has worked for
+5, and the allocation of patronage reflects this split:
+
+<PointInTime data={patronageExample.getDetailsAt('2024-09-30')} />
+
+At the end of the year, Caitlin joins, but does not work a full week before the
+end of year calculations are made.
+
+<PointInTime data={patronageExample.getDetailsAt('2024-12-31')} />
+
+Assuming no further team members are added, by the end of the following year,
+even though all three worked full-time for the entire year, Alfred has slightly
+more patronage due to having started earning tenure earlier.
+
+<PointInTime data={patronageExample.getDetailsAt('2025-12-31')} />
+
+However, by the end of the year after that, all the tenure has reached its
+maximum contribution to patronage; as a result, the patronage shares have
+stabilized with all three members earning an equal share.
+
+<PointInTime data={patronageExample.getDetailsAt('2026-12-31')} />

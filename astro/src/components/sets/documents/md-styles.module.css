@@ -21,10 +21,7 @@
     @apply my-4;
 }
 .container :global ol {
-    @apply my-4;
-    --indentSize: 4rem;
-    counter-reset: item;
-    margin-left: var(--indentSize);
+    @apply my-4 ml-6 list-decimal;
 }
 .container :global li {
     @apply my-4;
