@@ -4,13 +4,13 @@ description: A simple example on how Patronage is intended to work
 order: 10
 ---
 
-import { PatronageRecord } from '../../../business-logic/patronage';
+import { PatronageRecord, fullWorkWeekSchedule } from '../../../business-logic/patronage';
 import { PointInTime } from '../../../components/patronage/point-in-time';
 
 export const patronageExample = new PatronageRecord()
-    .add('2024-04-29', 'addMember', { name: 'Alfred', tenureRatePerWeek: 5 })
-    .add('2024-07-29', 'addMember', { name: 'Betty', tenureRatePerWeek: 5 })
-    .add('2024-12-30', 'addMember', { name: 'Caitlin', tenureRatePerWeek: 5 })
+    .add('2024-04-29', 'addMember', { name: 'Alfred', tenureSchedule: fullWorkWeekSchedule })
+    .add('2024-07-29', 'addMember', { name: 'Betty', tenureSchedule: fullWorkWeekSchedule })
+    .add('2024-12-30', 'addMember', { name: 'Caitlin', tenureSchedule: fullWorkWeekSchedule })
 
 As a simple example, let's consider the following events:
 

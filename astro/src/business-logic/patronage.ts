@@ -1,8 +1,17 @@
 import { parseISO, addDays } from 'date-fns';
 
+// One per day of the week
+type DayOfWeek = 0 | 1 | 2 | 3 | 4 | 5 | 6;
+type TenureSchedule = Record<DayOfWeek, number>;
+export const noWorkSchedule: TenureSchedule = [0,0,0,0,0,0,0];
+// TODO: it's unclear in the bylaws when Tenure is allocated; what happens for
+// partial weeks at beginning/end of the year? This code allows for a tenure
+// schedule array.
+export const fullWorkWeekSchedule: TenureSchedule = [0, 2, 1, 1, 1, 0, 0];
+
 export interface PatronageEvents {
-    addMember: { name: string; tenureRatePerWeek: number };
-    tenureRate: { name: string; tenureRatePerWeek: number };
+    addMember: { name: string; tenureSchedule: TenureSchedule };
+    tenureRate: { name: string; tenureSchedule: TenureSchedule };
     patronage: { name: string; additional: number; comment: string };
 }
 
@@ -15,7 +24,7 @@ export type PatronageEvent<T extends keyof PatronageEvents = keyof PatronageEven
 export type PatronageEntry = {
     memberDate: Date;
     weeksYTD: number;
-    tenurePerWeek: number;
+    tenureSchedule: TenureSchedule;
     tenure: number;
     tenureYTD: number;
     patronageScheduleYTD: number;
@@ -35,7 +44,7 @@ function newPatronageEntry(memberDate: Date): PatronageEntry {
     return {
         memberDate,
         weeksYTD: 0,
-        tenurePerWeek: 0,
+        tenureSchedule: noWorkSchedule,
         tenure: 0,
         tenureYTD: 0,
         patronageScheduleYTD: 0,
@@ -80,29 +89,25 @@ export class PatronageRecord {
                 switch (nextEvent.type) {
                     case 'addMember':
                         const newMember = newPatronageEntry(current);
-                        newMember.tenurePerWeek = nextEvent.tenureRatePerWeek;
+                        newMember.tenureSchedule = nextEvent.tenureSchedule;
                         results[nextEvent.name] = newMember;
                         break;
                     case 'patronage':
                         results[nextEvent.name]!.patronageScheduleYTD += nextEvent.additional;
                         break;
                     case 'tenureRate':
-                        results[nextEvent.name]!.tenurePerWeek = nextEvent.tenureRatePerWeek;
+                        results[nextEvent.name]!.tenureSchedule = nextEvent.tenureSchedule;
                         break;
                 }
             }
 
             // process tenure
-            if (current.getDay() === 5 /* Saturday */) {
-                // TODO: it's unclear in the bylaws when Tenure is allocated;
-                // what happens for partial weeks at beginning/end of the year?
-                // This code assumes that all tenure is allocated on Saturday at
-                // the end of the week.
-                for (const entry of Object.values(results)) {
+            const dayOfWeek = current.getDay() as DayOfWeek;
+            for (const entry of Object.values(results)) {
+                if (dayOfWeek === 6 /* Saturday */)
                     entry.weeksYTD += 1;
-                    entry.tenure += entry.tenurePerWeek;
-                    entry.tenureYTD += entry.tenurePerWeek
-                }
+                entry.tenure += entry.tenureSchedule[dayOfWeek];
+                entry.tenureYTD += entry.tenureSchedule[dayOfWeek];
             }
         }
 
