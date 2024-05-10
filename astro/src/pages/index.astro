@@ -5,6 +5,8 @@ import mdStyles from '../components/sets/documents/md-styles.module.css'
 import { organizationName, orgAbbrev } from '../constants'
 
 const documents = await getCollection('documents');
+const stories = await getCollection('stories');
+stories.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Layout
@@ -26,5 +28,16 @@ const documents = await getCollection('documents');
     <h2>Rendering to PDF</h2>
 
     <p>For now, open each page and use "Print to PDF" within your browser.</p>
+
+    <h2>Explanations</h2>
+
+    <p>Concepts, such as Patronage, are hard to understand from just the definitions themselves. The following pages help to explain how it works in practice.</p>
+
+    <ul>
+        {stories.map((entry) =>
+            <li>
+                <a href={`/stories/${entry.slug}`}>{entry.data.title}</a>
+            </li>)}
+    </ul>
 
 </Layout>

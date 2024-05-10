@@ -6,6 +6,7 @@
 Sample](https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-Ldj_CiYRwRyAUyaGo6ThXg)
 
 Alternatives:
+- [REI](https://www.rei.com/assets/about-rei/governance/rei-bylaws/live.pdf)
 - [Boston Techcollective
   Cooperative](https://drive.google.com/file/d/0B7aFfmk4wQfbbWxoYjNPVEVGbjg/view?resourcekey=0-ejmpEn33O9JxmiOXgF-tMA)
 - [Sample with Two Classes at page

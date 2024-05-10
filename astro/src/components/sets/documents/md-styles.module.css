@@ -1,12 +1,16 @@
 
 .container :global h1 {
-    @apply text-lg font-bold text-center;
+    @apply text-2xl font-bold mt-8 mb-4;
     font-variant: small-caps;
 }
 
 .container :global h2 {
-    @apply font-bold text-center;
-    counter-increment: article;
+    @apply text-xl font-bold mt-8 mb-4;
+    font-variant: small-caps;
+}
+
+.container :global h3 {
+    @apply text-lg font-bold mt-8 mb-4;
     font-variant: small-caps;
 }
 
@@ -17,10 +21,7 @@
     @apply my-4;
 }
 .container :global ol {
-    @apply my-4;
-    --indentSize: 4rem;
-    counter-reset: item;
-    margin-left: var(--indentSize);
+    @apply my-4 ml-6 list-decimal;
 }
 .container :global li {
     @apply my-4;
@@ -29,5 +30,5 @@
     @apply my-4 ml-6 list-disc;
 }
 .container :global blockquote {
-    @apply my-4 px-4 border-l-emerald-500 border-l-4;
+    @apply my-4 px-4 border-l-slate-500 border-l-4;
 }
