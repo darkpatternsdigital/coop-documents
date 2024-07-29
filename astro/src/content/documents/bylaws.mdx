@@ -14,7 +14,7 @@ export const WorkerMember = makeRef({ comment: "Membership", articleNumber: 1, s
 export const MembershipRequirements = makeRef({ comment: "Becoming a Member", articleNumber: 1, section: "3" });
 export const CandidacyPeriod = makeRef({ comment: "Candidacy Period", articleNumber: 1, section: "4" });
 export const MemberAcceptance = makeRef({ comment: "Acceptance of Members", articleNumber: 1, section: "5" });
-export const ConsentToTaxTreatment = makeRef({ comment: "Consent to Tax Treatment", articleNumber: 1, section: "8" });
+export const ConsentToTaxTreatment = makeRef({ comment: "Consent to Tax Treatment", articleNumber: 1, section: "7" });
 export const WorkerQualificationsSection = makeRef({ comment: "Membership", articleNumber: 1, section: "3" });
 export const MembershipTermination = makeRef({ comment: "Termination of Membership", articleNumber: 2 });
 export const MembershipPropertyRights = makeRef({ comment: "Rights and Interest on Withdrawal or Termination", articleNumber: 2, section: "4" })
@@ -22,9 +22,11 @@ export const MemberMeetings = makeRef({ comment: "Member Meetings", articleNumbe
 export const VoteByMembers = makeRef({ comment: "Voting", articleNumber: 3, section: "2" });
 export const LossOfMembersQuorum = makeRef({ comment: "Loss of Quorum at a Meeting", articleNumber: 3, section: "10" });
 export const BoardMeetings = makeRef({ comment: "Board of Directors Meetings", articleNumber: 4 });
+export const TermsOfOffice = makeRef({ comment: "Terms of Office", articleNumber: 4, section: "2" });
 export const BoardMeetingsSchedule = makeRef({ comment: "Notice of Board Meetings", articleNumber: 4, section: "4" });
 export const VoteByDirectors = makeRef({ comment: "Director Voting", articleNumber: 4, section: "3" });
 export const LossOfBoardQuorum = makeRef({ comment: "Loss of Quorum at Meeting", articleNumber: 4, section: "7" });
+export const RemovalAndResignation = makeRef({ comment: "Removal and Resignation", articleNumber: 4, section: "11" });
 export const DutiesOfDirectors = makeRef({ comment: "Duties of Directors", articleNumber: 5 });
 export const DecisionMaking = makeRef({ comment: "Decision-Making Process", articleNumber: 6 });
 export const VoteSection = makeRef({ comment: "Decision-Making Process", articleNumber: 6, section: "1" });
@@ -34,6 +36,7 @@ export const Patronage = makeRef({ ...financialProvisions, comment: "Patronage",
 export const PatronageSchedule = makeRef({ ...financialProvisions, comment: "Patronage Schedule", section: "3" });
 export const PeriodicRedemption = makeRef({ ...financialProvisions, comment: "Periodic Redemption of Member Accounts", section: "7" })
 export const UnclaimedMoney = makeRef({ ...financialProvisions, comment: "Unclaimed Money", section: "10" });
+export const Amendments = makeRef({ comment: "Amendments", articleNumber: 13 });
 
 {/* Based on
 https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-Ldj_CiYRwRyAUyaGo6ThXg
@@ -41,43 +44,85 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
 # Bylaws <br/> of <br/> {organizationName}
 
+Dark Patterns Digital, LCA (the “Cooperative”) is a limited cooperative
+association organized under the Colorado Uniform Limited Cooperative Association
+Act, C.R.S. Title 7, Article 58. The Cooperative’s business shall be conducted
+on a cooperative basis for the mutual benefit of the Cooperative’s members, and
+in accordance with the purposes stated in the Articles of Organization  of the
+Cooperative (the “Articles”).
+
+WHEREAS, the Cooperative adopts and subscribes to the seven International
+Cooperative Alliance cooperative principles:
+
+1. Voluntary and Open Membership.
+2. Democratic Member Control.
+3. Members' Economic Participation.
+4. Autonomy and Independence.
+5. Education, Training and Information.
+6. Cooperation among Cooperatives.
+7. Concern for Community.
+
+WHEREAS, the Articles, as amended from time to time, are hereby incorporated by
+reference into these Bylaws.
+
 ## Membership
 
 1. Classes of Members. The Cooperative shall have one class of Members. No other
    classes of Members shall be created unless approved by then-existing classes
-   of Members, according to the Articles of Incorporation and these Bylaws.
+   of Members, according to the Articles and these Bylaws.
 
 2. Reference to "Member". Any reference to "Member" or "Membership" in these
-   Bylaws, without further specification of Member Class, shall mean
-   Worker-members, or Worker-membership, as applicable.
+   Bylaws shall mean worker members, or worker-membership, as applicable.
 
 3. Becoming a Member. To become a Member of this Cooperative, a person must:
 
     <section data-lower-alpha>
 
     1. Be a resident of the United States of America;
-    2. Be a worker in the Cooperative, which is a natural person who
-        contributes labor or services to the cooperative;
+    2. Be a worker in the Cooperative, which is a natural person who contributes
+       labor or services to the Cooperative or a business entity whose majority
+       owner contributes labor or services to the Cooperative;
     3. Work for the Cooperative for a "Candidacy Period", as described in
-        <CandidacyPeriod />;
-    4. Be approved by the existing Members, by means of the process described
-        in <CandidacyPeriod /> and <MemberAcceptance />;
-    5. Purchase a membership certificate for {membershipCertificateAmount}; and
-    6. Receive a copy of the Cooperative’s Disclosure Statement and Bylaws.
+       <CandidacyPeriod />;
+    4. Be approved by the existing Members, by means of the process described in
+       <CandidacyPeriod /> and <MemberAcceptance />;
+    5. Purchase a membership unit for {membershipCertificateAmount} (“Membership
+       Unit”). A Membership Unit shall represent a Member’s interest in the
+       Cooperative and shall include the right to participate as a worker in the
+       Cooperative, financial rights and the right to vote as provided in these
+       Bylaws;
+    6. Receive a copy of the Cooperative's Articles and Bylaws;
+    7. Agree to undertake such patronage responsibilities, which may be
+       prescribed by these Bylaws, by their membership agreement (“Member
+       Agreement”), by policies promulgated from time to time by the Board of
+       Directors, or by other member agreements executed in the ordinary course
+       of business;
+    8. Agree to participate in Cooperative governance functions and
+       responsibilities, as required by these Bylaws and the Board of Directors;
+    9. Agree to at all times maintain good standing as an Member;
+    10. Meet such other uniform conditions and qualification requirements as may
+        be prescribed from time-to-time by the Board of Directors; and
+    11. Agree to at all times abide by the Articles, these Bylaws, the Member
+        Agreement, and any rules and policies as may be established and adopted
+        from time to time by the Members or the Board of Directors.
 
     </section>
 
 4. Candidacy Period.
 
     1. Persons seeking Membership in the Cooperative must complete a candidacy
-       period of at least three (3) months.
-    2. An individual candidate’s candidacy period must last no longer than
+       period of at least three (3) months (“Candidacy Period”) which may be
+       extended by the Board of Directors. Candidates must be working for the
+       Cooperative at least eight (8) hours per week during the Candidacy
+       Period.
+    2. An individual candidate's Candidacy Period must last no longer than
        twelve (12) months.
-    3. A person's Candidacy Period begins immediately upon submitting a
+    3. A person’s Candidacy Period begins immediately upon submitting a
        Membership Application to the President or Secretary.
-    4. Within 30 days after receipt, the President or Secretary shall cause
-       notice to be given to the Members entitled to vote that the person is a
-       Prospective Member.
+    4. Within 30 days after receipt of the Membership Application, the President
+       or Secretary shall cause notice to be given to the Members entitled to
+       vote that the person is a prospective Member of the Cooperative (a
+       “Prospective Member”).
 
 5. Acceptance of Members. The application review and approval process for a
    Prospective Member is as follows:
@@ -89,80 +134,94 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
     2. The Members shall then decide by the decision-making process described in
        <VoteSection /> whether to approve the application.
 
-    3. The Members shall vote to elect the new Member to the Board of Directors
-       for the remainder of the term.
+    3. The Members shall vote to elect the new Member to the Cooperative and to
+       the Board of Directors for the remainder of the then-current term, if
+       applicable.
 
     4. Upon approval of the application, election of the Member to the Board if
-       applicable, and meeting the qualifications listed in
-       <MembershipRequirements />, the applicant shall immediately become a
-       Member.
+       applicable, executing a Membership Agreement, and meeting the
+       qualifications listed in <MembershipRequirements />, the applicant shall
+       immediately become a Member of the Cooperative.
 
     5. The Cooperative may waive the Candidacy Period by a 75% vote of all the
        Members.
 
-6. Transfer of Membership Certificate. No membership certificate in the
-   cooperative shall be transferred to any person by the original holder thereof
-   except to a spouse for holding in co-tenancy, to a business entity controlled
-   by such holder, to the cooperative upon the redemption or acquisition thereof
-   by the cooperative, or to a person entitled thereto by operation of law.
+6. Transfer of Membership Unit. No Membership Unit in the Cooperative shall be
+   transferred to any person by the original holder thereof except to a spouse
+   for holding in co-tenancy, to a business entity controlled by such holder, to
+   the Cooperative upon the redemption or acquisition thereof by the
+   Cooperative, or to a person entitled thereto by operation of law, provided
+   that if the transferee is not qualified to be a Member of the Cooperative,
+   the transferee’s interest shall be limited to a financial interest only until
+   the Membership Unit is redeemed by the Cooperative.
 
-8. Consent to Tax Treatment. Each individual or entity which becomes a Member of
+7. Consent to Tax Treatment. Each individual or entity which becomes a Member of
    this Cooperative shall by such act alone agree to take into account on the
    Member’s income tax return any Patronage Dividends which are made in
    qualified written notices of allocation at their stated dollar amounts in the
    manner provided in Section 1385(a) of the Internal Revenue Code of 1986, as
-   amended (the "Code") in the taxable year in which the Member receives the
+   amended (the “Code”) in the taxable year in which the Member receives the
    qualified written notices of allocation. Each Member shall be solely
    responsible for any tax liability incurred as a result of Patronage with the
    Cooperative, as defined in <Patronage />. Each Member shall indemnify and
    forever hold harmless the Cooperative from any claims of any kind arising out
    of their Patronage or their Membership of the Cooperative.
 
-9. Record of Members. A record of the Members and their full names, addresses,
+8. Record of Members. A record of the Members and their full names, addresses,
    and, if required for tax reporting purposes, social security or tax
    identification numbers, shall be kept by the Cooperative. Each Member shall
    notify the Secretary immediately of any change in the Member’s name, address,
    social security number, or tax identification number.
 
-10. Certificates of Interests in the Cooperative. The cooperative shall not be
-    required to issue any certificates representing memberships, capital stock
-    or other investments in the cooperative. If certificates are issued, the
-    restrictions on transfer of stock or membership must be printed upon every
-    certificate of stock or certificate of membership subject to the
-    restrictions. Certificates shall also include the terms and conditions of
-    redemption, if any.
+9. Membership Interests in the Cooperative. The Cooperative shall not be
+   required to issue any certificates representing memberships, units, capital
+   stock or other investments in the Cooperative. If certificates are issued,
+   the restrictions on transfer of stock or membership must be printed upon
+   every certificate of stock or certificate of membership subject to the
+   restrictions. Certificates shall also include the terms and conditions of
+   redemption, if any.
 
 ## Termination of Membership
 
 1. Resignation of a Member.
 
-    1. Every Member has the right to resign from the Cooperative.
+    1. Every Member has the right to resign from the Cooperative as a Member at
+       any time.
     2. When a Member resigns from the Cooperative his or her Membership will be
-       terminated.
+       terminated, subject to the terms and conditions of this
+       <MembershipTermination />;
     3. To resign from the Cooperative, a Member must provide the Secretary of
        the Cooperative with a written notice of resignation. The resignation
        shall become effective immediately without any action on the part of the
        Cooperative.
     4. If a Member resigns, he or she is still responsible for any charges,
-       dues, or other obligations that the Member owes to the Cooperative. The
-       Cooperative shall still have the right to enforce any such obligation or
-       obtain damages for its breach.
+       dues, or other obligations that the Member owes to the Cooperative as of
+       the date of their resignation. The Cooperative shall have the right to
+       enforce any such obligation or obtain damages for its breach.
+    5. Unless a Member has withdrawn because such Member has died, dissolved its
+       business, is no longer eligible for membership in the Cooperative, or
+       because of a violation of any agreements, policies, or procedures of the
+       Cooperative, such Member shall be eligible to reapply for membership in
+       the Cooperative at any time following the effective date of such
+       withdrawal.
 
-2. Death of Member. A Membership shall immediately terminate upon the death of a
-   Member.
+2. Death of a Member. A Membership shall immediately terminate upon the death of
+   a Member.
 
-3. Expulsion of a Member. No Member may be expelled or suspended except
-   according to procedures satisfying the requirements of this section:
+3. Expulsion of a Member. No Member may be expelled, suspended, or terminated
+   except according to procedures satisfying the requirements of this section:
     1. A Member may, for any lawful reason, be expelled from the Cooperative by
-       a vote pursuant to <VoteSection /> of the Members at a duly
-       called meeting at which a quorum is present.
-    2. The Member must be given fifteen (15) days’ prior notice of the expulsion,
-       suspension, or termination, and the reasons for that expulsion,
-       suspension, or termination.
+       a vote pursuant to <VoteSection /> of the Members at a duly called
+       meeting at which a quorum is present.
+    2. The Member must be given fifteen (15) days’ prior notice of the
+       expulsion, suspension, or termination, and the reasons for that
+       expulsion, suspension, or termination.
     3. The Member shall have an opportunity to be heard, orally or in writing,
        not less than five (5) days before the effective date of expulsion,
-       suspension, or termination, by a person or body authorized to decide that
-       the proposed expulsion, termination, or suspension not take place.
+       suspension, or termination, by a person or body authorized by the Board
+       of Directors to decide that the proposed expulsion, termination, or
+       suspension not take place, and if no such person or body is authorized,
+       then by the Board of Directors.
     4. Any notice required under this section may be given by any method
        reasonably calculated to provide actual notice. Any notice given by mail
        must be given by first-class or registered mail sent to the last address
@@ -172,36 +231,41 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        termination.
     6. The Cooperative may direct a Member whose expulsion is being considered
        to refrain from conducting business as a Member until the expulsion
-       decision is made, until the expulsion decision is made. The Cooperative
-       may also direct a Member whose expulsion is being considered to stay away
-       from the Cooperative’s places of business except as necessary to exercise
-       her or his rights under law.
+       decision is finalized. The Cooperative may also direct a Member whose
+       expulsion is being considered to stay away from the Cooperative’s places
+       of business except as necessary to exercise her or his rights under law.
+    7. Notwithstanding the forgoing requirements for notice and a right to a
+       hearing, a Member may be terminated immediately without notice or hearing
+       if the Board reasonably determines the Member has committed a crime
+       against the Cooperative, including but not limited to fraud, theft, or
+       embezzlement of the Cooperative’s property.
+
 
 4. Rights and Interest on Withdrawal or Termination. On the date at which a
-   member’s written notice of intent to withdraw becomes effective or upon the
-   termination of his membership in the cooperative by the board of directors,
-   all rights and interests of the member in the cooperative shall cease and the
-   member shall be entitled only to payment for the value of the member’s
-   property rights and interest in the cooperative, as defined in this
+   Member’s written notice of intent to withdraw becomes effective or upon the
+   termination of their Membership in the Cooperative by the Board of Directors,
+   all rights and interests of the Member in the Cooperative shall cease and the
+   Members shall be entitled only to payment for the value of the Member’s
+   property rights and interest in the Cooperative, as defined in this
    <MembershipPropertyRights />, which shall be equitably and conclusively
-   appraised by the board of directors. The property rights and interest of
-   member are defined to mean  the amount paid by the member for membership
-   certificates acquired as a condition for membership in the cooperative.
+   appraised by the Board of Directors. The property rights and interest of a
+   Member are defined to mean the amount paid by the Member for Membership Units
+   acquired as a condition for Membership in the Cooperative.
 
-   Within one (1) year after the effective date of the member’s withdrawal or
-   termination, the cooperative shall pay to the member the price paid by the
-   member for the member’s membership certificates.
+   Within one (1) year after the effective date of the Member’s withdrawal or
+   termination, the Cooperative shall pay to the Member the price paid by the
+   Member for the Member’s Membership Unit.
 
-5. Payment of Equity Capital. Subsequent to the effective date of a member’s
-   withdrawal or termination of membership in the cooperative, the member shall
+5. Payment of Equity Capital. Subsequent to the effective date of a Member’s
+   withdrawal or termination of Membership in the Cooperative, the Member shall
    also be entitled to the repayment of, in addition to his property rights and
-   interest in the cooperative defined above, the member’s Member Account in
+   interest in the Cooperative defined above, the Member’s Member Account in
    accordance with the terms and conditions of <PeriodicRedemption />, as and
-   when such Member Account becomes payable to other members in the member’s
-   class under that Section. Any interest bearing certificates of indebtedness
-   issued by the cooperative to a member pursuant to the provisions of
-   <PeriodicRedemption />, shall effect a complete and total release of the
-   obligations of the cooperative to the member with respect to equity.
+   when such Member Account becomes payable to other Members in the Cooperative.
+   Any interest bearing certificates of indebtedness issued by the Cooperative
+   to a Member pursuant to the provisions of <PeriodicRedemption />, shall
+   effect a complete and total release of the obligations of the Cooperative to
+   the Member with respect to equity.
 
 ## Member Meetings
 
@@ -227,14 +291,14 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 3. Annual Members Meeting. A regular Member Meeting of all Members shall be held
    annually within 120 days after the close of the fiscal year on a date and at
    such time and place in the area served by the Cooperative as may be
-   determined by the Board and specified in the proper notice of the meeting. At
-   all regular meetings of Members, all lawful business may be brought before
-   the meeting regardless of whether stated in the notice of the meeting; except
-   that amendments to the Articles or these Bylaws or other action required to
-   be stated in the notice of the meeting shall not be subject to action unless
-   notice thereof is stated in the notice of the meeting. The Board shall
-   prepare and post the membership list ("Membership List") during a regular
-   annual membership meeting.
+   determined by the Board of Directors and specified in the proper notice of
+   the meeting. At all regular meetings of Members, all lawful business may be
+   brought before the meeting regardless of whether stated in the notice of the
+   meeting; except that amendments to the Articles or these Bylaws or other
+   action required to be stated in the notice of the meeting shall not be
+   subject to action unless notice thereof is stated in the notice of the
+   meeting. The Board of Directors shall prepare and post the Membership List
+   (as hereinafter defined) during a regular annual membership meeting.
 
 4. Special Member Meetings.
 
@@ -278,8 +342,8 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        Members is not possible, the Cooperative shall give written notice not
        less than 10 days nor more than 90 days before the date of the meeting.
     3. Members Entitled to Notice. Any Member shall be entitled to notice of any
-       meeting at which their class of membership shall cast votes, so long as
-       their Membership became official 30 days before the meeting date.
+       meeting at which they are entitled to cast votes, so long as their
+       Membership became official 30 days before the meeting date.
     4. The notice shall state the following:
 
         <section data-lower-alpha>
@@ -288,21 +352,21 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
         2. If applicable, the log-in or call-in information for
            telephone/video/web conference;
         3. In the case of a special meeting, the general nature of the business
-           to be transacted, and that no other business may be transacted, or
+           to be transacted, and that no other business may be transacted, and
         4. The notice of any meeting at which Officers or Directors are to be
            elected shall include the names of the nominees.
 
         </section>
 
     5. Membership List. After establishing the date for a meeting of the
-       membership, the cooperative shall prepare an alphabetical list of the
-       current names and addresses of all its members who are entitled to be
-       given notice of the meeting including the amount of the qualifying
-       investment for member ship. The members list shall be available for
-       inspection by any member or member's agent or attorney, for a proper
-       corporate purpose, beginning the earlier of ten (10) days before the
-       meeting or two (2) business days after notice of the meeting is given and
-       continuing through the meeting or any adjournment thereof.
+       Members, the Cooperative shall prepare an alphabetical list of the
+       current names and addresses of all its Members who are entitled to be
+       given notice of the meeting (“Membership List”). The Membership List
+       shall be available for inspection by any Member or Member’s agent or
+       attorney, for a proper corporate purpose, beginning the earlier of ten
+       (10) days before the meeting or two (2) business days after notice of the
+       meeting is given and continuing through the meeting or any adjournment
+       thereof.
 
     6. Notwithstanding the above, any of the following decisions, other than by
        unanimous approval by those entitled to vote, shall be valid only if the
@@ -315,8 +379,9 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
            and one or more of its Directors, or between the Cooperative and any
            corporation, firm, or association in which one or more of its
            Directors has a material financial interest or is a Director;
-        4. Amendment of the Articles of Organization; and
-        5. Approval of a plan of distribution upon winding up of the Cooperative.
+        4. Amendment of the Articles; and
+        5. Approval of a plan of distribution upon merger, sale or winding up of
+           the Cooperative.
 
 6. Meetings Held Without Proper Notice.
 
@@ -343,10 +408,9 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
         <section data-lower-alpha>
 
         1. Describe the proposed action;
-        2. Provide an opportunity to approve or disapprove the proposed
-           action;
+        2. Provide an opportunity to approve or disapprove the proposed action;
         3. State that unless revoked by the member voting in person at the
-           meeting, the ballot will be counted if received by the cooperative on
+           meeting, the ballot will be counted if received by the Cooperative on
            or before the time of the meeting.
 
         </section>
@@ -365,51 +429,62 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
     2. Any written ballot used without a meeting shall:
         <section data-lower-alpha>
+
         1. Describe the proposed action;
-        2. Provide an opportunity to approve or disapprove the proposed
-           action;
+        2. Provide an opportunity to approve or disapprove the proposed action;
         3. Provide a reasonable amount of time within which to return the ballot
-           to the cooperative.
+           to the Cooperative.
+
         </section>
 
     3. Written ballots will be used for the election of Officers and may be used
        for Directors, when applicable. Written ballots may also be distributed
        for other matters if the Board authorizes.
     4. Ballots for Officer and Director elections must:
+
         <section data-lower-alpha>
+
         1. Be distributed at least 10 days before the meeting at which they will
            be elected;
         2. Include the names of all nominees; and
         3. Include a space for write-in candidates.
+
         </section>
+
     5. Other written ballots must:
+
         <section data-lower-alpha>
+
         1. Describe the proposed action; and
         2. Provide an opportunity to approve or disapprove of the proposed
            action.
+
         </section>
 
     6. All ballots shall specify:
+
         <section data-lower-alpha>
+
         1. The number of responses necessary to reach quorum; and
         2. The deadline by which the ballot must be filled out and turned in, in
            order to be counted.
+
         </section>
 
     7. When ballots are distributed at a meeting, the number of Members voting
        shall be considered present for the purposes of determining quorum with
        respect to the specific actions in the ballot.
 
-9. Quorum. A majority of Members of a class shall constitute a quorum at a
-   meeting of Members of that class. When a quorum is present, proposals shall
-   be adopted using the processes as described in <DecisionMaking />, unless
-   otherwise required in the Articles or Bylaws.
+9. Quorum. A majority of Members shall constitute a quorum at a meeting of the
+   Members. When a quorum is present, proposals shall be adopted using the
+   processes as described in <DecisionMaking />, unless otherwise required in
+   the Articles or Bylaws.
 
 10. Loss of Quorum at a Meeting. If there is a quorum present at the beginning
     of a meeting and then some Members leave so that less than a quorum remains,
     the remaining Members may continue to conduct business, as long as any
     actions they take (other than adjournment) adhere to the number of votes of
-    the Members required to constitute a quorum for that class.
+    the Members required to constitute a quorum for the meeting.
 
 11. Adjournment for Lack of Quorum. In the absence of quorum, a majority of
     present Members can vote to adjourn the meeting, and no other business may
@@ -426,37 +501,35 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        entitled to vote at that meeting.
 
 13. Action Without Meetings.
-    1. Any action which may be taken at any regular or special Members meeting
-       may be taken without a meeting if the Cooperative distributes a written
-       ballot to every Member entitled to vote on that proposal.
-    2. The written ballot shall set forth the proposal, provide the opportunity
-       to specify approval or disapproval of the proposal, indicate the number
-       of responses needed to meet quorum, the percentage of approvals necessary
-       to pass the proposal; and provide a reasonable time within which to
-       return the ballot.
-    3. Approval under this section shall be valid only when:
-        <section data-lower-alpha>
-        1. The Cooperative receives within the specified timeframe a number of
-           written ballots that is at least equal to the quorum required for a
-           meeting; and
-        2. The number of approvals is at least equal to the number of approvals
-           required at a meeting.
-        </section>
-    4. The Secretary shall cause a vote to be taken by written ballot upon any
-       action or recommendation proposed in writing by 20 percent of the
-       Members.
+    1. Any action required or permitted to be taken at a Members’ meeting, as
+       set forth in these Bylaws, may be taken without a meeting if notice of
+       the proposed action is given and the Members holding membership interests
+       having not less than the minimum number of votes that would be necessary
+       to authorize or take the action at a meeting at which all of the
+       membership interests entitled to vote thereon, as determined in the
+       Bylaws were present and voted, consent to the action in a record.
 
 ## Board of Directors Meetings
 
 1. Number of Directors.
 
-    1. The number of Directors shall equal the number of Members and shall at no
-       time be fewer than three.
+    1. The number of directors (“Director(s)”) on the Board of Directors shall
+       be composed of and equal the number of Members of the Cooperative and
+       shall at no time be fewer than three.
     2. Non-member Directors may be elected to the Board of Directors only if
        there are fewer than three Members. In all other cases, only Members may
        be Directors.
+    3. If the Board of Directors is limited to less than all Members of the
+       Cooperative, then <TermsOfOffce /> shall apply.
 
 2. Terms of Office.
+
+    This <TermsOfOffce /> shall only apply if the composition of the  Board of
+    Directors is changed so that it is limited to less than all Members of the
+    Cooperative. Otherwise, while the Board of Directors consists of all Members
+    of the Cooperative, the Directors’ terms of office on the Board of Directors
+    shall be continuous without expiration and without the requirement for
+    election, subject to <RemovalAndResignation />.
 
     1. The term of office of the Directors shall end at the first Membership
        Meeting during even-numbered years.
@@ -470,72 +543,77 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
    <VoteSection />.
 
 4. Notice of Board Meetings.
-    1. Regular meetings of the Board will be held the first Monday of every
-       month at 7:00 p.m. CT. Board Meetings of the Cooperative in accordance
-       with this <BoardMeetings /> may take place in person, by telephone
-       conference, by internet conference, by video conference, or by any other
-       electronic or telecommunications means by which the Directors can
-       effectively communicate, following the notice procedures prescribed in
-       these Bylaws. If the day fixed for the regular meeting falls on a legal
-       holiday, the meeting shall be held at the same time on the next day.
-    2. Special meetings of the Board shall be held upon four days’ notice by
-       first-class mail or 48 hours’ notice delivered personally, by telephone,
-       including a voice messaging system, or by electronic transmission by the
-       Cooperative. A notice, or waiver of notice, need not specify the purpose
-       of any regular or special meeting of the Board.
+    1. Regular meetings of the Board of Directors will be held the first Monday
+       of every month at 7:00 p.m. CT. Board of Directors Meetings of the
+       Cooperative in accordance with this <BoardMeetings /> may take place in
+       person, by telephone conference, by internet conference, by video
+       conference, or by any other electronic or telecommunications means by
+       which the Directors can effectively communicate, following the notice
+       procedures prescribed in these Bylaws. If the day fixed for the regular
+       meeting falls on a legal holiday, the meeting shall be held at the same
+       time on the next day.
+    2. Special meetings of the Board of Directors shall be held upon four days’
+       notice by first-class mail or 48 hours’ notice delivered personally, by
+       telephone, including a voice messaging system, or by electronic
+       transmission by the Cooperative. A notice, or waiver of notice, need not
+       specify the purpose of any regular or special meeting of the Board of
+       Directors.
+    3. Waiver of Notice. Notice of a meeting need not be given to any Director
+       who provides a waiver of notice or consent to holding the meeting or an
+       approval of the minutes in writing, whether before or after the meeting,
+       or who attends the meeting without protesting the lack of notice to that
+       Director. All waivers, consents, and approvals shall be filed with the
+       corporate records or made a part of the minutes of the meetings.
 
-5. Waiver of Notice. Notice of a meeting need not be given to any Director who
-   provides a waiver of notice or consent to holding the meeting or an approval
-   of the minutes in writing, whether before or after the meeting, or who
-   attends the meeting without protesting the lack of notice to that Director.
-   All waivers, consents, and approvals shall be filed with the corporate
-   records or made a part of the minutes of the meetings.
-
-6. Quorum.
-    1. A majority of Directors shall constitute a quorum for a Board meeting.
+5. Quorum.
+    1. A majority of Directors shall constitute a quorum for a Board of
+       Directors meeting.
     2. When a quorum is present, proposals shall be adopted using the modified
-       consensus process as described in <VoteSection />, unless
-       otherwise required in the Articles or Bylaws.
+       consensus process as described in <VoteSection />, unless otherwise
+       required in the Articles or Bylaws.
 
-7. Loss of Quorum at Meeting. If there is a quorum present at the beginning of a
+6. Loss of Quorum at Meeting. If there is a quorum present at the beginning of a
    meeting and then some Directors leave so that less than a quorum remains, the
    remaining Directors may continue to conduct business as long as any actions
    they take (other than adjournment) reflect consensus of, or when voting is
    called for, at least three-fourths of the Directors required to constitute a
    quorum.
 
-8. Adjournment for Lack of Quorum. In the absence of quorum, a majority of
+7. Adjournment for Lack of Quorum. In the absence of quorum, a majority of
    present Directors can vote to adjourn the meeting. No other business may be
    transacted, except as provided in <LossOfBoardQuorum /> above.
 
-9. Adjourned Meetings. A majority of the Directors present, whether or not a
+8. Adjourned Meetings. A majority of the Directors present, whether or not a
    quorum is present, may adjourn any meeting to another time and place. If the
    meeting is adjourned for more than 24 hours, notice of any adjournment to
    another time or place shall be given prior to the time of the adjourned
    meeting to the Directors who were not present at the time of the adjournment.
 
-10. Action Without Meeting. The Board of Directors may take action without a
-    meeting if all Directors individually or collectively consent in writing to
-    the action. The written consents shall be filed with the minutes of the
-    Board’s meetings. Action by written consent has the same force and effect as
-    a unanimous vote of the Directors.
+9. Action Without Meeting. The Board of Directors may take action without a
+   meeting if all Directors individually or collectively consent in writing to
+   the action. The written consents shall be filed with the minutes of the Board
+   of Directors’ meetings. Action by written consent has the same force and
+   effect as a unanimous vote of the Directors.
 
-11. Removal and Resignation.
+10. Removal and Resignation.
 
-    1. So long as all Members are required by these bylaws to serve on the
-       Board, and no non-Members serve on the Board, Directors may not be
-       removed nor resign except if they cease to be Members.
-    2. Should the provision by which all Members constitute the Board be
-       amended, or if non-Members serve on the board, the following shall apply:
+    1. So long as all Members are required by these Bylaws to serve on the Board
+       of Directors, and no non-Members serve on the Board of Directors,
+       Directors may not be removed nor resign except if they cease to be
+       Members.
+    2. Should the provision by which all Members constitute the Board of
+       Directors be amended, or if non-Members serve on the Board of Directors,
+       the following shall apply:
+
         <section data-lower-alpha>
 
-        1. The Board may declare vacant the office of a Director whose
-           eligibility for election as a Director has ceased, or who has been
-           declared of unsound mind by a final order of court, or convicted of a
-           felony.
+        1. The Board of Directors may declare vacant the office of a Director
+           whose eligibility for election as a Director has ceased, or who has
+           been declared of unsound mind by a final order of court, or convicted
+           of a felony.
         2. Directors may be removed without cause by the Members, if removal is
-           approved by a vote of 75% or greater of all Members at a duly
-           called meeting at which a quorum is present.
+           approved by a vote of 75% or greater of all Members at a duly called
+           meeting at which a quorum is present.
         3. Vacancies caused by removal may only be filled by approval of a
            majority of all Members.
         4. A Director may resign effective upon giving written notice to the
@@ -548,81 +626,86 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
 12. Empowered Committees.
 
-    1. The Board may establish committees through the decision-making process in
-       <VoteSection />. Each committee shall consist of two or more
-       Directors or Members who serve at the pleasure of the Board.
-    2. An empowered committee shall have the same authority as the Board, except
-       with respect to:
+    1. The Board of Directors may establish committees through the
+       decision-making process in <VoteSection />. Each committee shall consist
+       of two or more Directors or Members who serve at the pleasure of the
+       Board of Directors.
+    2. An empowered committee shall have the same authority as the Board of
+       Directors, except with respect to:
         <section data-lower-alpha>
 
         1. Approval of any action that by law requires approval by the majority
-        of the Members;
-        2. Filling vacancies of the Board or any committee that has authority of
-        the Board;
-        3. Fixing compensation of Directors for serving on the Board;
+           of the Members;
+        2. Filling vacancies of the Board of Directors or any committee that has
+           authority of the Board of Directors;
+        3. Fixing compensation of Directors for serving on the Board of
+           Directors;
         4. Amendment or repeal of the Bylaws or adoption of new Bylaws;
-        5. Amendment or repeal of any resolution that the Board has expressly
-        deemed not amendable or repealable;
-        6. Establishment of committees of the Board or appointing Members to
-        such committees;
+        5. Amendment or repeal of any resolution that the Board of Directors has
+           expressly deemed not amendable or repealable;
+        6. Establishment of committees of the Board of Directors or appointing
+           Members to such committees;
         7. Expenditure of corporate funds to support a nominee for Director (if
-        there are more people nominated for Director than open slots
-        available).
+           there are more people nominated for Director than open slots
+           available).
 
         </section>
 
 ## Duties of Directors
 
 1. Management of Business. The Board of Directors shall have general supervision
-   and control of the business and the affairs of the cooperative and shall make
+   and control of the business and the affairs of the Cooperative and shall make
    all rules and regulations not inconsistent with law, the articles of
-   incorporation or with these bylaws for the management of the business and the
-   guidance of the members, officers, employees, and agents of the cooperative.
-   The board shall have installed an accounting system which shall be adequate
-   to the requirements of the business, and it shall be the duty of the
-   directors to require proper records to be kept of all business transactions.
+   incorporation or with these Bylaws for the management of the business and the
+   guidance of the Members, officers, employees, and agents of the Cooperative.
+   The Board of Directors shall have installed an accounting system which shall
+   be adequate to the requirements of the business, and it shall be the duty of
+   the directors to require proper records to be kept of all business
+   transactions.
 
-2.  Reports of Business. The Board of Directors shall present at each regular
-    meeting of the members and, if appropriate, at special meetings of the
-    members a detailed statement or report of the business of the preceding
-    year. The statements shall show the financial condition of the cooperative
-    at the end of the fiscal year and shall be in a form as shall fully exhibit
-    to the members a complete picture of the assets and liabilities of the
-    cooperative, of the cash on hand, inventory, and indebtedness and all other
-    facts and figures pertinent to a complete understanding of the cooperative’s
-    financial position for the period.
+2. Reports of Business. The Board of Directors shall present at each regular
+   meeting of the Members and, if appropriate, at special meetings of the
+   Members a detailed statement or report of the business of the preceding year.
+   The statements shall show the financial condition of the Cooperative at the
+   end of the fiscal year and shall be in a form as shall fully exhibit to the
+   members a complete picture of the assets and liabilities of the Cooperative,
+   of the cash on hand, inventory, and indebtedness and all other facts and
+   figures pertinent to a complete understanding of the Cooperative’s financial
+   position for the period.
 
-3. Reports of Cash and Inventory. At the close of every fiscal year, the board
-   of directors shall insure that a complete inventory report is prepared. The
+3. Reports of Cash and Inventory. At the close of every fiscal year, the Board
+   of Directors shall insure that a complete inventory report is prepared. The
    report shall include a statement of cash on hand and an itemized list of all
    commodities, and supplies on hand, showing the quantity and the cost or
    current value, whichever is the lesser, of each type of commodity, product,
    and supply. The report shall be certified as true and correct by those
    responsible for its preparation and shall be made available to the auditor
-   and filed in the permanent records of the cooperative. Directors may
+   and filed in the permanent records of the Cooperative. Directors may
    determine who shall take the inventory, and may be present to verify that it
    is correct to the best of their knowledge.
 
 4. Depository. The Board of Directors shall have the power to select one or more
-   banks to act as depositories of the funds of the cooperative and to determine
+   banks to act as depositories of the funds of the Cooperative and to determine
    the manner of receiving, depositing, and disbursing the funds of the
-   cooperative and the form of checks and the person or persons by whom checks
+   Cooperative and the form of checks and the person or persons by whom checks
    shall be signed, with the power to change banks and the person or persons
    signing checks and the form thereof at will.
 
 5. Agreements with Members. The Board of Directors shall have the power to carry
-   out all agreements of the cooperative with its members in every way
-   advantageous to the cooperative representing the members collectively.
+   out all agreements of the Cooperative with its members in every way
+   advantageous to the Cooperative representing the members collectively.
 
-6. Representation. The Board of Directors may designate any member of the
-   cooperative, any Officer of the Cooperative or other employee of the
+6. Representation. The Board of Directors may designate any Member of the
+   Cooperative, any Officer of the Cooperative or other employee of the
    Cooperative to represent the Cooperative in any other business entity or
-   trade association in which the cooperative has an interest. The compensation
+   trade association in which the Cooperative has an interest. The compensation
    of such representative shall be determined by the Board of Directors.
 
 ## Decision-Making Process
 
-1. Decision-Making Process for Directors and Members.
+1. Decision-Making Process for Directors and Members. When making any decisions
+   on behalf of the Cooperative, Directors and Members, respectively, agree to
+   the following:
     1. Matters will be discussed with the goal of reaching consensus.
     2. If consensus cannot be reached, Members will vote on whether the issue
        must be decided at the current meeting or can be tabled for future
@@ -636,7 +719,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
 1. Titles of Officers.
 
-    1. Officers of the Cooperative shall be:
+    1. The officers (“Officer(s)”) of the Cooperative shall be:
         <section data-lower-alpha>
         1. A President,
         2. A Secretary,
@@ -653,12 +736,14 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        of the Board of Directors.
 
 3. Resignation or Removal of Officers.
-    1. Officers can be removed by a vote of the Board.
+    1. Officers can be removed by a vote of the Board of Directors.
     2. The President may be removed at any regular or special meeting of the
-       members by the affirmative vote of one-fifth (1/5) of the members present
+       Members by the affirmative vote of one-fifth (1/5) of the Members present
        or voting by mail.
-    3. Any Officer may resign at any time with written notice to the Cooperative.
-    4. Vacancies shall be filled at the next Board meeting.
+    3. Any Officer may resign at any time with written notice to the
+       Cooperative.
+    4. Vacancies shall be filled at the next Board of Directors meeting.
+
 
 ## Duties of Officers.
 
@@ -670,33 +755,34 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
     </section>
 
 2. Duties of the President. The president shall (1) preside over all meetings of
-   the Cooperative and of the board of directors, (2) call special meetings of
+   the Cooperative and of the Board of Directors , (2) call special meetings of
    the Board of Directors, (3) perform all acts and duties usually performed by
-   a chief executive and presiding officer, and (4) sign all membership
-   certificates and such other papers of the cooperative as he may be authorized
-   or directed to sign by the board of directors; provided, however, that the
-   board of directors may authorize any person to sign any or all checks,
-   contracts and other instruments in writing in behalf of the cooperative. The
-   president shall take on the duties of the Secretary if the Secretary is
-   unable or unwilling to do so. The president shall perform such other duties
-   as may be prescribed by the Board of Directors.
+   a chief executive and presiding officer, and (4) sign such other papers of
+   the Cooperative as the president may be authorized or directed to sign by the
+   Board of Directors; provided, however, that the Board of Directors may
+   authorize any person to sign any or all checks, contracts and other
+   instruments in writing in behalf of the Cooperative. The president shall take
+   on the duties of the Secretary if the Secretary is unable or unwilling to do
+   so. The president shall perform such other duties as may be prescribed by the
+   Board of Directors.
 
 3. Duties of the Secretary. The secretary shall keep a complete record of all
-   meetings of the cooperative and of the board of directors and shall have
-   general charge and supervision of the corporate records of the cooperative.
-   He shall sign all papers pertaining to the cooperative as he may be
-   authorized or directed to sign by the board of directors. He shall serve all
-   notices required by law and by these bylaws and shall make a full report of
-   all matters and business pertaining to his office and to the members at the
-   annual meeting. The duplicate copies of the minutes and complete membership
-   records shall be maintained at the principal office of the cooperative. The
-   secretary shall make corporate reports required by law and shall perform such
-   other duties as may be required of him by the cooperative or by the board of
-   directors. He shall have supervision of the cooperative’s financial records
-   and perform such duties with respect to the finances of the cooperative as
-   may be prescribed by the board of directors. Upon the election of his
-   successor, the secretary shall turn over to him all books and other property
-   belonging to the cooperative that he has in his possession.
+   meetings of the Cooperative and of the Board of Directors and shall have
+   general charge and supervision of the corporate records of the Cooperative.
+   The secretary shall sign all papers pertaining to the Cooperative as they may
+   be authorized or directed to sign by the Board of Directors. The secretary
+   shall serve all notices required by law and by these Bylaws and shall make a
+   full report of all matters and business pertaining to their office and to the
+   Members at the annual meeting. The duplicate copies of the minutes and
+   complete membership records shall be maintained at the principal office of
+   the Cooperative. The secretary shall make corporate reports required by law
+   and shall perform such other duties as may be required of them by the
+   Cooperative or by the Board of Directors. The secretary shall have
+   supervision of the Cooperative’s financial records and perform such duties
+   with respect to the finances of the Cooperative as may be prescribed by the
+   Board of Directors. Upon the election of a successor, the secretary shall
+   turn over to the successor all books and other property belonging to the
+   Cooperative that the secretary has in their possession.
 
 ## Financial Provisions
 
@@ -708,22 +794,34 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        fiscal year attributable to Member labor.
     2. "Profit" shall be defined as the excess of revenues over Expenses for a
        fiscal year attributable to non-Member labor.
-    3. "Loss" shall be defined as the excess of Expenses over revenues for a
-       fiscal year.
+    3. "Loss" shall be defined as the excess of Expenses over revenues for a fiscal year. The Board of Directors shall determine the manner in which the loss shall be taken into account for accounting, taxation or any other purposes; provided that in making its determination the Board of Directors shall take into account all applicable facts and circumstances and account for the loss on a basis which is fair and equitable to all Members in the cooperative.  In making its determination the Board of Directors may authorize actions including, but not limited to:
+
+        (1)	allocating the loss on an equitable basis to some or all of the Members of the Cooperative by canceling equity held in Member Account, by charging Members directly, or by charging Members using non-qualified notices of allocation,
+
+        (2)	carrying the loss back or forward to offset earnings of the Cooperative or particular segments of its operations in prior or future years,
+
+        (3)	canceling any or all outstanding equity account balances shown on the books of the Cooperative, or
+
+        (4)	charging the loss against appropriate reserves or the Collective Account.
+
     4. Surplus, Profit, and Loss shall be determined on a tax basis. Surplus and
        Profit shall not include cash contributions by Members to capital.
-    5. "Expenses" shall include Distributions paid pursuant to
-       <ConsentToTaxTreatment />, payments of any interest and principal on any
-       debts of the Cooperative, and reasonable reserves as determined by the
-       Board of Directors.
-    6. The "Collective Account" shall be Surplus, Profit, and reserves that are
-       retained in the Cooperative and not distributed to Members. This
-       Collective Account shall be distributed only upon dissolution of the
-       Cooperative and no member at any time shall have any right or interest in
-       or to the Collective Account, except on dissolution.
-    7. "Tenure" shall be accumulated on a per-week basis, for all Members and
-       Prospective Members within their candidacy periods, Sunday through
-       Saturday, as the greatest of the following:
+    5. "Expenses" shall include all normal business expenses, distributions of
+       Patronage Dividends paid pursuant to <ConsentToTaxTreatment />, payments
+       of any interest and principal on any debts of the Cooperative, and
+       reasonable reserves as determined by the Board of Directors to be added
+       to the Collective Account.
+    6. The "Collective Account" shall contain Profit, and reserves  (including
+       working capital for the Cooperative) that are retained in the Cooperative
+       and not distributed to Members. This Collective Account shall be
+       distributed only upon dissolution of the Cooperative and no Member at any
+       time shall have any right or interest in or to the Collective Account,
+       except on dissolution.
+    7. "Tenure" shall mean the number of hours worked by Member or Prospective
+       Member in the Cooperative and shall be accumulated on a per-week basis,
+       for all Members and Prospective Members within their candidacy periods,
+       Sunday through Saturday, as the greatest of the following (each expressed
+       as a value earned per week between 1 -5):
 
         * 1 if at least 1 hour was worked for the Cooperative, or if an employee
           of the Cooperative.
@@ -732,19 +830,18 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
         * 4 if at least 24 hours were worked for the Cooperative.
         * 5 if at least 32 hours were worked for the Cooperative.
 
-        > TODO: Make it clear that tenuer is earned at the completion of 1 hour,
-        > 8 hours, etc. rather than at the end of the week.
-
     8. "Patronage" shall be calculated per Member within a fiscal year as the
-        sum of the following:
+       sum of the following:
 
         <section data-lower-alpha>
 
-        1. Tenure accumulated within the current fiscal year;
+        1. Tenure accumulated within the current fiscal year; plus
         2. A number as determined via Patronage Schedules as defined in
             <PatronageSchedule />; plus
-        3. The lesser of (a) the Member's total Tenure at the end of the fiscal
-            year or (b) twice the Patronage earned in the above.
+        3. The lesser of (i) the Member’s total accumulated Tenure calculated
+           from the beginning of their Membership with the Cooperative through
+           the end of the current fiscal year, or (ii) two times the Patronage
+           calculated in (a) and (b) above.
 
         </section>
 
@@ -753,11 +850,10 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        Patronage).
     10. "Member Account" shall be defined as each Member’s capital account in
         the Cooperative, which is calculated as written notices of allocation
-        minus Distributions minus Losses plus/minus any other item that affects
-        the balance in the Member’s capital account.
-    11. "Distribution" means the distribution of interest on capital
-        contributed, but does not include Patronage Dividends.
-    12. "Deemed Liquidation Event" shall mean (a) a consolidation, merger or
+        minus Distributions minus Losses  allocated to the Members as provided
+        in subsection 9.2.3 above, plus/minus any other item that affects the
+        balance in the Member’s capital account.
+    11. "Deemed Liquidation Event" shall mean (a) a consolidation, merger or
         other similar transaction of or involving the Corporation in which the
         Members of the Corporation immediately prior to such consolidation,
         merger or other similar transaction do not continue to hold, immediately
@@ -768,92 +864,79 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
 3. Patronage Schedule.
 
-    1. A Patronage Schedule shall document the process by which additional
-       amounts of Patronage may be allocated to Members.
-    2. The Patronage Schedule shall have an effective date no earlier than 120
-       days after approval by the Board or a committee appointed by the board to
-       handle Patronage.
-    3. Within 30 days of the approval of a new Patronage Schedule, the President
-       or Secretary shall cause notice to be given to the Members including the
-       new Patronage Schedule.
-    4. An approved Patronage Schedule may be cancelled prior to its Effective
-       Date by a vote pursuant to <VoteSection /> of the Members at a duly
-       called meeting at which a quorum is present.
-    5. Upon the effective date of a Patronage Schedule, any previous Patronage
-       Schedules shall be considered effectively terminated.
-    6. While no Patronage Schedule is in effect, the amount of determined via
-       Patronage Schedules shall be calculated as 1 for every $5,000 paid to the
-       Cooperative via executed contracts referred by the Member.
-
-       > TODO: The above statement requires legal review.
+    1. The Board of Directors may from time to time adopt and implement
+       Patronage schedules (“Patronage Schedule(s)”) which may be used to
+       document the process by which additional amounts of Patronage may be
+       allocated to Members.
 
 4. Allocations.
 
     1. Any Profit shall be credited to the Collective Account.
-    2. Any Surplus shall be credited to the Collective Account as necessary to
-       bring the year’s contribution to the Collective Account up to 25% of the
-       year’s combined Profit/Surplus. All other Surplus shall be paid as
-       Patronage Dividends in direct proportion to Patronage during the fiscal
-       year.
-    3. Any Loss shall be allocated 75% to Member Accounts in direct proportion
-       to Patronage during the fiscal year and 25% to the Collective Account,
-       with the exception of Losses occurring and/or carried over from the
-       Cooperative’s first two fiscal years, which shall be allocated 100% to
-       the Collective Account.
-    4. The percentages referred to in this section can be changed for a coming
-       fiscal year by the Board.
+    2. Any Surplus shall be credited to the Collective Account in such amounts
+       and for such purposes as may be determined by the Board of Directors. All
+       other Surplus shall be paid as Patronage Dividends in direct proportion
+       to Patronage during the fiscal year.
+    3. The percentages referred to in this section can be changed for a coming
+       fiscal year by the Board of Directors.
 
 5. Patronage Dividends.
 
     1. Patronage Dividends shall be made 50% in cash and 50% to each individual
        Member Account as a written notice of allocation, unless different
        proportions are approved by the Board within eight-and-a-half months of
-       the fiscal year’s close – however, at least 20% must be distributed in
-       cash.
+       the fiscal year’s close; provided that, at least 20% must be distributed
+       in cash.
     2. Patronage Dividends may be by qualified or non-qualified written notices
        of allocation or a combination of the two.
+    3. Patronage Dividends shall be allocated and made to such Members at least
+       at the close of each fiscal year on a patronage basis, or as periodically
+       as the Board of Directors shall determine, and shall be distributed in
+       accordance with this Section generally.
+    4. When making Patronage Dividends through qualified written notices of
+       allocation, if not made earlier as provided in subsection 9.5.3, the
+       Cooperative shall within eight and one-half (8-1/2) months after the
+       close of its fiscal year notify each Member in the form of a qualified
+       written notice of allocation (as defined in 26 U.S.C. 1388) of said
+       Member's total allocation of the Cooperative's Surplus paid as Patronage
+       Dividends including the cash portion as well as the amount credited to
+       said Member's Member Account. Each Member shall treat said Member's
+       allocation of Patronage Dividends in the manner prescribed by
+       <ConsentToTaxTreatment /> of these Bylaws and any applicable tax laws,
+       regulations, and private letter rulings.
 
-    > TODO: When are dividends allocated/distributed?
-
-6. Distributions of Interest on Member Accounts. The Cooperative may, by a
-   decision of the Board, pay interest to Members on the Members Accounts. The
-   interest may be paid in cash or as an additional credit to the Member
-   Accounts. The rate of interest shall be determined by the Board, but may not,
-   in one year, exceed 15 percent of each Member’s contributed capital, which
-   includes capital contributions, membership fees, and capital credits.
-
-7. Periodic Redemption of Member Accounts.
+6. Periodic Redemption of Member Accounts.
     1. No acquisition, recall or redemption of Member Accounts in the
-       cooperative shall be made if the result of it would be to render the
-       cooperative unable to pay its debts as they become due in the usual
-       course of business or causes the remaining assets of the cooperative to
+       Cooperative shall be made if the result of it would be to render the
+       Cooperative unable to pay its debts as they become due in the usual
+       course of business or causes the remaining assets of the Cooperative to
        be less than its liabilities plus the amount necessary to satisfy the
        interests of the holders of securities or other Member Accounts
-       preferential to those receiving the distribution if the cooperative were
+       preferential to those receiving the distribution if the Cooperative were
        to be dissolved at the time of the distribution.
-    1. The Cooperative shall aim to pay out in cash to the Members all funds
+    2. The Cooperative shall aim to pay out in cash to the Members all funds
        credited to their Member Accounts within three years of the date they
        were first credited.
-    2. As a general rule, written notices of allocation credited to Member
+    3. As a general rule, written notices of allocation credited to Member
        Accounts (including notices now converted to debt) will be paid out in
        the order in which they are credited, with the oldest paid out first.
-       However, the Board can decide to accelerate the repayment of debt owed to
-       former Members on a case-by-case basis.
-    3. If the Cooperative does not have sufficient funds to pay out all funds
+       However, the Board of Directors can decide to accelerate the redemption
+       of Member Accounts or debt owed to former Members on a case-by-case
+       basis.
+    4. If the Cooperative does not have sufficient funds to pay out all funds
        credited to Member Accounts for a given fiscal year, then funds will be
        paid out in proportion to the balance in the Member Accounts.
 
-8. Priority of Payments. Notwithstanding anything else to the contrary in this
+7. Priority of Payments. Notwithstanding anything else to the contrary in this
    Article, payments by the Cooperative shall be made in the following order of
    priority:
     1. First, to make payments of any necessary expenses related to the
-       operation of the cooperative, including wages, and payments of any
+       operation of the Cooperative, including wages, and payments of any
        interest and principal on any debts of the Cooperative,
     2. Second, to pay Patronage Dividends to all eligible Members,
     3. Third, to pay Distributions to all eligible Members, and
     4. Fourth, to make periodic redemptions pursuant to <PeriodicRedemption />.
 
-9. Dissolution Distributions.
+8. Dissolution Distributions.
 
     1. Upon liquidation, dissolution, or sale of the assets of the Cooperative
        as a Deemed Liquidation Event, any assets left after payment of all debts
@@ -865,27 +948,32 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        deemed sufficient if sent by certified mail, at least 30 days before
        distribution of any residual assets, to the person’s last known business
        or residence address.
+    3. Notwithstanding the foregoing, upon the dissolution, liquidation, merger,
+       or sale of the Cooperative, or sale of all or substantially all of the
+       Cooperative’s assets, whether or not as a Deemed Liquidation Event, all
+       debts and liabilities of the Cooperative shall first be paid according to
+       their respective priorities, as defined by law or by agreement.
 
-10. Unclaimed Money. A claim for money against the cooperative shall be subject
-    to the provisions of this <UnclaimedMoney /> whenever the cooperative is
-    ready, able, and willing to pay the claim, and has paid or is paying
-    generally claims arising under similar circumstances, but payment of the
-    claim cannot be made for the reason that the cooperative does not know the
-    whereabouts or mailing address of the one to whom it is payable or the one
-    entitled to payment. If the claim is not actually paid within a period of
-    three (3) years after notification as herein provided, the cooperative shall
-    remove the claim as a liability on its books. No removal shall be made unless
-    the cooperative shall have sent by first class, United States mail, a written
-    notice of eligibility for payment addressed to the person appearing on the
-    cooperative’s records to be entitled to payment at the last address of such
-    person shown by the records of the cooperative. If not claimed within three
-    (3) years after giving of notice, the claim shall be deemed extinguished. Any
-    and all amounts recovered by the cooperative pursuant to this <UnclaimedMoney
-    />, after deducting therefrom the amount of any taxes payable thereon, shall
-    be placed in a reserve or surplus account established previously or hereafter
-    by the cooperative.
+9. Unclaimed Money. A claim for money against the Cooperative shall be subject
+   to the provisions of this <UnclaimedMoney /> whenever the Cooperative is
+   ready, able, and willing to pay the claim, and has paid or is paying
+   generally claims arising under similar circumstances, but payment of the
+   claim cannot be made for the reason that the Cooperative does not know the
+   whereabouts or mailing address of the one to whom it is payable or the one
+   entitled to payment. If the claim is not actually paid within a period of
+   three (3) years after notification as herein provided, the Cooperative shall
+   remove the claim as a liability on its books. No removal shall be made unless
+   the Cooperative shall have sent by first class, United States mail, a written
+   notice of eligibility for payment addressed to the person appearing on the
+   Cooperative’s records to be entitled to payment at the last address of such
+   person shown by the records of the Cooperative. If not claimed within three
+   (3) years after giving of notice, the claim shall be deemed extinguished. Any
+   and all amounts recovered by the Cooperative pursuant to this <UnclaimedMoney
+   />, after deducting therefrom the amount of any taxes payable thereon, shall
+   be placed in a reserve or surplus account established previously or hereafter
+   by the Cooperative.
 
-11. Borrowed Capital. This Cooperative may borrow such additional capital from
+10. Borrowed Capital. This Cooperative may borrow such additional capital from
     Members or any other person or source as permitted by law. It may issue
     notes or certificates of indebtedness for amounts of borrowed money with
     such terms and conditions and on which it may pay an interest rate as
@@ -897,11 +985,13 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
     1. The Cooperative shall keep at its principal office:
 
         <section data-lower-alpha>
+
         1. The original or a copy of its Articles and Bylaws as amended to date;
         2. Adequate and correct books and records of account;
         3. Minutes of the proceedings of its Members, Board, and committees of
            the Board; and
         4. A record of its Members, providing their names and addresses.
+
         </section>
 
     2. Minutes and other books and records shall be kept either in written form
@@ -920,6 +1010,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
        any reasonable time, for a purpose reasonably related to such person’s
        interests as a Member.
 
+
 3. Annual Report.
 
     1. The annual report shall be prepared no later than 120 days after the
@@ -935,7 +1026,7 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
         4. A statement of where the names and addresses of current Members are
            located; and
         5. An annual statement of transactions and indemnifications to
-           "interested persons" as defined by law.
+           “interested persons” as defined by law.
 
         </section>
 
@@ -950,54 +1041,82 @@ https://drive.google.com/file/d/0B7aFfmk4wQfbWVRPQzFkU1ZHLVE/view?resourcekey=0-
 
 ## Disputes
 
-In the event of a dispute between a Member and the Cooperative concerning any
-matter arising out of the relationship or transactions between the Member and
-the Cooperative, upon request of either party and after ten (10) days’ prior
-notice to the member concerned, the matter shall be set for hearing before the
-Board of Directors, who shall hear the same, and shall enter written findings or
-rulings thereon. The decision of the Board of Directors in such cases shall be
-final; provided, however, that either party having received a decision may
-within sixty (60) days thereafter bring an appropriate action in any court of
-proper jurisdiction regarding such matter or transaction. Any member affected by
-the final ruling rendered in the dispute, who shall thereafter refuse to
-acquiesce or abide by the ruling, shall thereafter be subject to termination of
-membership in accordance with the provisions of <MembershipTermination /> of
-these Bylaws.
+1. All disputes, differences, and controversies arising from the performance of
+   these Bylaws shall be resolved first through internal mediation within the
+   Cooperative. In the event of a dispute between a Member and the Cooperative
+   concerning any matter arising out of the relationship or transactions between
+   the Member and the Cooperative, and that cannot be resolved through internal
+   mediation, upon request of either party and after ten (10) days’ prior notice
+   to the Member concerned, the matter shall be set for hearing before the Board
+   of Directors, who shall hear the same, and shall enter written findings or
+   rulings thereon. The decision of the Board of Directors in such cases shall
+   be final; provided, however, that either party having received a decision may
+   within sixty (60) days thereafter bring an appropriate action in any court of
+   proper jurisdiction regarding such matter or transaction. Any Member affected
+   by the final ruling rendered in the dispute, who shall thereafter refuse to
+   acquiesce or abide by the ruling, shall thereafter be subject to termination
+   of Membership in accordance with the provisions of <MembershipTermination />
+   of these Bylaws.
 
 ## Indemnification
 
-Each member, director, officer, employee and agent of the cooperative, and each
-person who shall serve at its request as a director, officer, employee or agent
-of another cooperative, corporation, partnership, joint venture, trust or other
-enterprise shall have all of the benefits and be subject to all of the
-requirements pertaining to indemnification by the cooperative as are now
-provided for corporations by the Colorado Business Corporation Act, and as the
-statutory provisions may be amended subsequent to the adoption of these bylaws,
-or if the statutory provisions shall be repealed in their entirety, the benefits
-and requirements of the provisions as they existed immediately prior to their
-repeal shall be applicable under this section and shall be incorporated herein
-by this reference thereto. The cooperative may maintain liability insurance
-covering its directors, officers, employees and agents in connection with
-fulfilling its obligations under this section or otherwise.
+1. The Cooperative shall indemnify an individual that was made a party to a
+   proceeding because the individual is or was a Director, officer, employee,
+   agent, or other fiduciary of the Cooperative, against reasonable expenses
+   incurred in the proceeding if
+    1. the individual’s conduct was in good faith;
+    2. the individual reasonably believed (i) in the case of conduct in an
+       official capacity with the Cooperative, that the conduct was in the
+       Cooperative’s best interests; and (ii) in all other cases, that the
+       conduct was at least not opposed to the Cooperative’s best interests; and
+    3. in the case of any criminal proceeding, the individual had no reasonable
+       cause to believe their conduct was unlawful.
+
+2. The Cooperative shall also indemnify any person who is serving or has served
+   the Cooperative as Director, officer, employee, agent, or other fiduciary,
+   and the estate and personal representative of any such person, to the extent
+   and in the manner provided in any bylaw, resolution of the Board or the
+   Members, contract, or otherwise, so long as such provision is legally
+   permissible.
+
+3. Notwithstanding Sections 12.1 and 12.2:
+    1. the Cooperative shall not indemnify a Director, officer, employee, agent,
+       or other fiduciary of the Cooperative in connection with a proceeding in
+       which such individual was adjudged liable to the Cooperative or on the
+       basis that such individual derived an improper personal benefit;
+    2. indemnification in accordance with this Article VIII shall not extend to
+       conduct that does not meet the requirements set forth in 9.1; and
+    3. the Cooperative shall limit its indemnification of any party to the total
+       assets of the Cooperative.
+
+4. The cooperative may maintain liability insurance covering its directors,
+   officers, employees and agents in connection with fulfilling its obligations
+   under this section or otherwise.
 
 ## Amendments
 
-1. Amendments requiring vote by Members. Amendments to these bylaws may be
-   proposed by a majority of the board of directors or by petition presented to
-   the secretary and signed by one-tenth (1/10) of the members. If notice of the
-   character of the amendment proposed has been given in the notice of a
-   meeting, these bylaws may be altered or amended at any regular or special
-   meeting of the members by the affirmative vote of three-fourths (3/4) of the
-   members present or voting by mail provided the members so voting have
-   received the exact wording of the amendments.
-2. Amendments not requiring vote by Members. The Board may effect bylaws changes
-   in within <BoardMeetingsSchedule />, <DutiesOfDirectors />, or
-   <DutiesOfOfficers />, as a vote as Directors in accordance with
-   <VoteByDirectors />.
+1. Except for the matters set out C.R.S. 7-58-405 subsection (5) (including
+   changes to the equity capital structure of the Cooperative, including the
+   rights of Members to share in profits or distributions, or the relative
+   rights, preferences, and restrictions granted to or imposed upon one or more
+   districts, classes, or voting groups of similarly situated Members; the
+   transferability of a Member’s interest; the manner or method of allocation of
+   profits or losses among Members; the quorum for a meeting and the rights of
+   voting and governance; or the terms for admission of new Members), the Board
+   may make, amend, or repeal any provision of the Bylaws without Member
+   approval, subject to a vote by the Directors in accordance with <VoteByDirectors />.
+   If the Board amends the Bylaws in accordance with this <Amendments />, it shall
+   provide a description of any such amendment to Members in a record not later
+   than thirty (30) days after the amendment, but the description may be
+   provided at the next annual members meeting if the meeting is held within the
+   thirty-day period. Otherwise, these Bylaws may be altered or amended at any
+   regular or special meeting of the Members by the affirmative vote of
+   three-fourths (3/4) of the Members present or voting by mail provided the
+   Members so voting have received the exact wording of the amendments.
 
 ## Distribution of Bylaws
 
-After adoption of these Bylaws or an Amendment to them, a copy of these Bylaws
-or the Amendment, as the case may be, shall be provided to each Member and to
+After adoption of these Bylaws or an amendment to them, a copy of these Bylaws
+or the amendment, as the case may be, shall be provided to each Member and to
 each person who later becomes a Member as shown on the books of record of the
-cooperative.
+Cooperative.
