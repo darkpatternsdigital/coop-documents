@@ -1,0 +1,74 @@
+
+.container :global h1 {
+    @apply text-lg font-bold text-center;
+    font-variant: small-caps;
+}
+
+.container :global h2 {
+    @apply font-bold text-center;
+    counter-increment: article;
+    font-variant: small-caps;
+}
+
+.container :global a {
+    @apply text-blue-700 dark:text-blue-400 underline;
+}
+.container :global p {
+    @apply my-4;
+}
+.container :global ol {
+    @apply my-4;
+    --indentSize: 4rem;
+    counter-reset: item;
+    margin-left: var(--indentSize);
+}
+.container :global li {
+    @apply my-4;
+}
+.container :global ul {
+    @apply my-4 ml-6 list-disc;
+}
+.container :global blockquote {
+    @apply my-4 px-4 border-l-emerald-500 border-l-4;
+}
+
+.container :global h2:before {
+    display: block;
+
+    /* Default content is Article.Secction.Secction. */
+    content: 'Article ' counter(article, upper-roman);
+}
+
+.container :global ol > li {
+    position: relative;
+}
+
+.container :global ol > li:before {
+    /* Float prevents the counter from overlapping the actual text while also
+    preventing any actual space on elements directly descendant of the li*/
+    float: left;
+    counter-increment: item;
+    margin-left: calc(-1 * var(--indentSize));
+
+    /* Default content is Article.Secction.Secction. */
+    content: counter(article) '.' counters(item, '.') '.';
+}
+
+/* Add an element with `data-lower-alpha` immediately around the `ol` to change
+its numbering to lower-alpha */
+.container :global ol [data-lower-alpha] > ol > li:before {
+    content: '(' counter(item, lower-alpha) ')';
+}
+
+/* Add an element with `data-numeric` immediately around the `ol` to change
+its numbering to numeric */
+.container :global [data-numeric] > ol > li:before {
+    content: counter(item, numeric) '.';
+}
+
+.container > :global(section) {
+    margin-left: 3rem;
+}
+.container > :global(section) > :global(ol) {
+    --indentSize: 3rem;
+}

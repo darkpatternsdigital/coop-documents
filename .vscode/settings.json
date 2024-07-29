@@ -1,0 +1,15 @@
+{
+    "tailwindCSS.includeLanguages": {
+        "astro": "html"
+    },
+    "tailwindCSS.experimental.configFile": "astro/src/tailwind.config.mts",
+    "[mdx]": {
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.unicodeHighlight.allowedCharacters": {
+            "–": true,
+            "’": true,
+        }
+    }
+}

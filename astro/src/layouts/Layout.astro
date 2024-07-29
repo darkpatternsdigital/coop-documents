@@ -1,0 +1,37 @@
+---
+import { twMerge } from 'tailwind-merge';
+import { getGitInfo } from './get-git-info'
+
+interface Props {
+	className?: string | undefined;
+	title: string;
+	description: string;
+	frontmatter?: object;
+}
+
+const { title, description, className } = { ...Astro.props.frontmatter, ...Astro.props };
+---
+
+<!doctype html>
+<html lang="en" style={{ '--git-info': `'${await getGitInfo()}'` }}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class={twMerge('my-4 mx-auto px-4 max-w-screen-lg print:max-w-none print:px-0', className)}>
+		<div class="version-header">
+			<span class="gitVersion"></span>
+		</div>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html {
+		background: white;
+		color: black;
+	}
+</style>

@@ -1,0 +1,57 @@
+---
+import { twMerge } from 'tailwind-merge';
+import { getGitInfo } from './get-git-info'
+import contractStyles from '../components/sets/documents/contract-styles.module.css';
+import legalStyles from '../components/sets/documents/legal-styles.module.css';
+
+interface Props {
+	className?: string;
+	title: string;
+	description: string;
+	mode: 'document' | 'contract';
+}
+
+const { title, description, className, mode } = Astro.props;
+const styles = mode === 'document' ? legalStyles : contractStyles;
+---
+
+<!doctype html>
+<html lang="en" style={{ '--git-info': `'${await getGitInfo()}'` }}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class={twMerge('my-4 mx-auto px-4 max-w-screen-lg print:max-w-none print:px-0 font-serif', className)}>
+		<div class="version-header">
+			<span class="gitVersion"></span>
+		</div>
+		<div class={styles.container}>
+			<slot />
+		</div>
+	</body>
+</html>
+<style is:global>
+	html {
+		background: white;
+		color: black;
+	}
+
+	@page {
+		margin: 1in;
+	}
+	.version-header {
+		font-size: 0.75rem;
+		opacity: 0.5;
+		display: flex;
+		flex-flow: row;
+		justify-content: end;
+	}
+	.gitVersion::after {
+		content: 'unknown';
+		content: var(--git-info);
+	}
+</style>

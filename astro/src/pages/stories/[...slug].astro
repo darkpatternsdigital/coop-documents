@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import mdStyles from '../../components/sets/documents/md-styles.module.css'
+
+export async function getStaticPaths() {
+    const blogEntries = await getCollection('stories');
+    blogEntries.sort((a, b) => a.data.order - b.data.order);
+    return blogEntries.map((entry, index, allEntries) => {
+        const prev = allEntries[index - 1];
+        const next = allEntries[index + 1];
+        return {
+            params: { slug: entry.slug },
+            props: {
+                entry,
+                prev: prev ? {
+                    title: prev.data.title,
+                    slug: prev.slug,
+                } : null,
+                next: next ? {
+                    title: next.data.title,
+                    slug: next.slug,
+                } : null,
+            },
+        };
+    });
+}
+
+const { entry, prev, next } = Astro.props;
+const { Content } = await entry.render();
+---
+<Layout {...entry.data} className={mdStyles.container}>
+    <Content />
+    <h2>Keep Reading</h2>
+    <div class="flex justify-between">
+        <div>
+            {prev ? <a href={`/stories/${prev.slug}`}>{prev.title}</a> : null}
+        </div>
+        <div>
+            {next ? <a href={`/stories/${next.slug}`}>{next.title}</a> : null}
+        </div>
+    </div>
+</Layout>
