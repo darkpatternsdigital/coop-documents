@@ -7,6 +7,7 @@ mode: contract
 import {
     organizationName,
 } from '../../constants';
+import SignatureBlock from '../../components/signature-block/signature-block.astro'
 
 # Worker Membership Agreement <br/> {organizationName}
 
@@ -377,13 +378,7 @@ acknowledged, the Parties agree as follows:
 **MEMBER**:
 
 **[NAME]**
-
-By:
-
-Name:
-
-Title:
-
+<SignatureBlock />
 
 
 **COOPERATIVE**:
@@ -391,10 +386,4 @@ Title:
 **DARK PATTERNS DIGITAL, LCA**,<br/>
 a Colorado limited cooperative association
 
-
-By:
-
-Name:
-
-Title:
-
+<SignatureBlock />
