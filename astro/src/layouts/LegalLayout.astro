@@ -1,15 +1,18 @@
 ---
 import { twMerge } from 'tailwind-merge';
 import { getGitInfo } from './get-git-info'
+import contractStyles from '../components/sets/documents/contract-styles.module.css';
 import legalStyles from '../components/sets/documents/legal-styles.module.css';
 
 interface Props {
 	className?: string;
 	title: string;
 	description: string;
+	mode: 'document' | 'contract';
 }
 
-const { title, description, className } = Astro.props;
+const { title, description, className, mode } = Astro.props;
+const styles = mode === 'document' ? legalStyles : contractStyles;
 ---
 
 <!doctype html>
@@ -26,7 +29,7 @@ const { title, description, className } = Astro.props;
 		<div class="version-header">
 			<span class="gitVersion"></span>
 		</div>
-		<div class={legalStyles.container}>
+		<div class={styles.container}>
 			<slot />
 		</div>
 	</body>

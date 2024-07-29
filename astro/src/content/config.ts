@@ -7,6 +7,7 @@ const documentsCollection = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		description: z.string(),
+		mode: z.enum(['document', 'contract']),
 	})
 });
 
