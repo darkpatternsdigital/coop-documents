@@ -26,7 +26,7 @@ export const BoardMeetings = makeRef({ comment: "Board of Directors Meetings", a
 export const TermsOfOffice = makeRef({ comment: "Terms of Office", articleNumber: 4, section: "2" });
 export const BoardMeetingsSchedule = makeRef({ comment: "Notice of Board Meetings", articleNumber: 4, section: "4" });
 export const VoteByDirectors = makeRef({ comment: "Director Voting", articleNumber: 4, section: "3" });
-export const LossOfBoardQuorum = makeRef({ comment: "Loss of Quorum at Meeting", articleNumber: 4, section: "7" });
+export const LossOfBoardQuorum = makeRef({ comment: "Loss of Quorum at Meeting", articleNumber: 4, section: "6" });
 export const RemovalAndResignation = makeRef({ comment: "Removal and Resignation", articleNumber: 4, section: "11" });
 export const DutiesOfDirectors = makeRef({ comment: "Duties of Directors", articleNumber: 5 });
 export const DecisionMaking = makeRef({ comment: "Decision-Making Process", articleNumber: 6 });
@@ -36,7 +36,10 @@ export const financialProvisions = { comment: "Financial Provisions", articleNum
 export const Patronage = makeRef({ ...financialProvisions, comment: "Patronage", section: "2.8" });
 export const PatronageSchedule = makeRef({ ...financialProvisions, comment: "Patronage Schedule", section: "3" });
 export const PeriodicRedemption = makeRef({ ...financialProvisions, comment: "Periodic Redemption of Member Accounts", section: "7" })
-export const UnclaimedMoney = makeRef({ ...financialProvisions, comment: "Unclaimed Money", section: "10" });
+export const UnclaimedMoney = makeRef({ ...financialProvisions, comment: "Unclaimed Money", section: "9" });
+export const indemnification = { comment: "Indemnification", articleNumber: 12 };
+export const Indemnification = makeRef(indemnification);
+export const IndemnificationSection1 = makeRef({...indemnification, section: "1"});
 export const Amendments = makeRef({ comment: "Amendments", articleNumber: 13 });
 
 {/* Based on
@@ -1084,13 +1087,14 @@ reference into these Bylaws.
    Members, contract, or otherwise, so long as such provision is legally
    permissible.
 
-3. Notwithstanding Sections 12.1 and 12.2:
+3. Notwithstanding Sections {indemnification.articleNumber}.1 and {indemnification.articleNumber}.2:
     1. the Cooperative shall not indemnify a Director, officer, employee, agent,
        or other fiduciary of the Cooperative in connection with a proceeding in
        which such individual was adjudged liable to the Cooperative or on the
        basis that such individual derived an improper personal benefit;
-    2. indemnification in accordance with this Article VIII shall not extend to
-       conduct that does not meet the requirements set forth in 9.1; and
+    2. indemnification in accordance with this <Indemnification/> shall not
+       extend to conduct that does not meet the requirements set forth in
+       <IndemnificationSection1/>; and
     3. the Cooperative shall limit its indemnification of any party to the total
        assets of the Cooperative.
 
